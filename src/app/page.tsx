@@ -6,6 +6,9 @@ export default function Home() {
       <Button title={"click here"}>
         Click here
       </Button>
+      <Button title={"click here"}>
+        cHECK
+      </Button>
     </div>
   );
 }
