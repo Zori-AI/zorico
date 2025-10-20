@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MobileMenu } from "@/components/MobileMenu";
 import Image from 'next/image';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -15,9 +16,44 @@ export function Header() {
     setIsMobileMenuOpen(false);
   };
 
+  // Функция для плавной прокрутки к секции
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+    setActiveSection(sectionId);
+    closeMobileMenu();
+  };
+
+  // Отслеживание активной секции при прокрутке
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'how-zori-works'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <header className="bg-[#f8f2ec] shadow-[0px_4px_8px_0px_rgba(0,0,0,0.05)]">
+      <header className="header-fixed bg-[#f8f2ec] shadow-[0px_4px_8px_0px_rgba(0,0,0,0.05)] z-[60]">
         <div className="container mx-auto px-4 md:px-16 py-4">
           <div className="flex items-center justify-between">
             {/* Mobile Menu Button */}
@@ -49,27 +85,52 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-4">
-              <div className="bg-[#f8f2ec] flex flex-col h-11 items-center justify-center px-4 relative shrink-0">
-                <span className="font-['JetBrains_Mono:Regular',_sans-serif] text-[20px] font-normal text-[#292827] uppercase leading-[22px] text-center whitespace-pre">
+              <button
+                onClick={() => scrollToSection('home')}
+                className={`bg-[#f8f2ec] flex flex-col h-11 items-center justify-center px-4 relative shrink-0 cursor-pointer hover:opacity-80 nav-button ${
+                  activeSection === 'home' ? 'nav-active' : ''
+                }`}
+              >
+                <span className="font-['JetBrains_Mono:Regular',_sans-serif] text-[20px] font-normal text-[#292827] uppercase leading-[22px] text-center whitespace-pre nav-text">
                   Home
                 </span>
-                <div className="h-0 relative shrink-0 w-full">
-                  <div className="absolute inset-[-0.5px_-1.04%]">
-                    <Image
-                      src="/images/ui/underline.svg"
-                      alt=""
-                      width={50}
-                      height={2}
-                      className="block max-w-none size-full"
-                    />
+                {activeSection === 'home' && (
+                  <div className="h-0 relative shrink-0 w-full">
+                    <div className="absolute inset-[-0.5px_-1.04%]">
+                      <Image
+                        src="/images/ui/underline.svg"
+                        alt=""
+                        width={50}
+                        height={2}
+                        className="block max-w-none size-full"
+                      />
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="bg-[#f8f2ec] flex items-center justify-center h-11 px-4 relative shrink-0">
-                <span className="font-['JetBrains_Mono:Regular',_sans-serif] text-[20px] font-normal text-[#292827] uppercase leading-[22px] text-center whitespace-pre">
+                )}
+              </button>
+              <button
+                onClick={() => scrollToSection('about')}
+                className={`bg-[#f8f2ec] flex flex-col h-11 items-center justify-center px-4 relative shrink-0 cursor-pointer hover:opacity-80 nav-button ${
+                  activeSection === 'about' ? 'nav-active' : ''
+                }`}
+              >
+                <span className="font-['JetBrains_Mono:Regular',_sans-serif] text-[20px] font-normal text-[#292827] uppercase leading-[22px] text-center whitespace-pre nav-text">
                   about
                 </span>
-              </div>
+                {activeSection === 'about' && (
+                  <div className="h-0 relative shrink-0 w-full">
+                    <div className="absolute inset-[-0.5px_-1.04%]">
+                      <Image
+                        src="/images/ui/underline.svg"
+                        alt=""
+                        width={50}
+                        height={2}
+                        className="block max-w-none size-full"
+                      />
+                    </div>
+                  </div>
+                )}
+              </button>
             </nav>
 
             {/* CTA Button */}
@@ -94,7 +155,12 @@ export function Header() {
       </header>
 
       {/* Mobile Menu */}
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
+      <MobileMenu 
+        isOpen={isMobileMenuOpen} 
+        onClose={closeMobileMenu} 
+        onNavigate={scrollToSection}
+        activeSection={activeSection}
+      />
     </>
   );
 }

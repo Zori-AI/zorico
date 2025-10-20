@@ -5,57 +5,68 @@ import Image from 'next/image';
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
+  onNavigate?: (sectionId: string) => void;
+  activeSection?: string;
 }
 
-export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+export function MobileMenu({ isOpen, onClose, onNavigate, activeSection }: MobileMenuProps) {
   return (
     <>
       {/* Overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          className="fixed inset-0 bg-[#292827]/50 z-40 md:hidden"
           onClick={onClose}
         />
       )}
       
-      {/* Menu */}
-      <div className={`fixed top-0 left-0 h-full w-64 bg-[#f8f2ec] z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
+      {/* Menu - Under Header */}
+      <div className={`fixed left-0 right-0 bg-[#f8f2ec] z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+        isOpen ? 'translate-y-0 top-[76px]' : '-translate-y-full -top-[190px]'
       }`}>
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 p-2"
-          aria-label="Close menu"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        
-        <div className="flex flex-col gap-4 p-4 pt-20">
+        {/* Menu Content */}
+        <div className="flex flex-col gap-0 p-4">
           {/* Home Button */}
-          <div className="flex flex-col items-center justify-center h-11 w-full px-4">
-            <span className="font-['JetBrains_Mono:Regular',_sans-serif] text-[20px] font-normal text-[#292827] uppercase leading-[22px]">
+          <button
+            onClick={() => onNavigate?.('home')}
+            className="flex flex-col items-center justify-center h-11 w-full px-4 cursor-pointer hover:opacity-80 nav-button"
+          >
+            <span className="font-['JetBrains_Mono:Regular',_sans-serif] text-[20px] font-normal text-[#292827] uppercase leading-[22px] nav-text">
               Home
             </span>
-            <div className="h-0 w-12 mt-2">
-              <Image
-                src="/images/ui/underline.svg"
-                alt=""
-                width={50}
-                height={2}
-                className="w-full h-0.5"
-              />
-            </div>
-          </div>
+            {activeSection === 'home' && (
+              <div className="h-0 w-12 mt-2">
+                <Image
+                  src="/images/ui/underline.svg"
+                  alt=""
+                  width={50}
+                  height={2}
+                  className="w-full h-0.5"
+                />
+              </div>
+            )}
+          </button>
           
           {/* About Button */}
-          <div className="flex items-center justify-center h-11 w-full px-4">
-            <span className="font-['JetBrains_Mono:Regular',_sans-serif] text-[20px] font-normal text-[#292827] uppercase leading-[22px]">
+          <button
+            onClick={() => onNavigate?.('about')}
+            className="flex flex-col items-center justify-center h-11 w-full px-4 cursor-pointer hover:opacity-80 nav-button"
+          >
+            <span className="font-['JetBrains_Mono:Regular',_sans-serif] text-[20px] font-normal text-[#292827] uppercase leading-[22px] nav-text">
               about
             </span>
-          </div>
+            {activeSection === 'about' && (
+              <div className="h-0 w-12 mt-2">
+                <Image
+                  src="/images/ui/underline.svg"
+                  alt=""
+                  width={50}
+                  height={2}
+                  className="w-full h-0.5"
+                />
+              </div>
+            )}
+          </button>
         </div>
       </div>
     </>

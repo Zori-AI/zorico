@@ -49,9 +49,9 @@ export function FAQSection() {
   };
 
   return (
-    <div className="container mx-auto px-8">
+    <div className="container mx-auto px-4 md:px-8">
       <div className="flex flex-col gap-8 items-center max-w-[1152px] mx-auto">
-        <p className="font-qedysans text-[36px] leading-[1.2] text-[#292827] text-center">
+        <p className="font-qedysans text-[24px] md:text-[36px] leading-[1.2] text-[#292827] text-center">
           FAQ
         </p>
         
@@ -59,24 +59,24 @@ export function FAQSection() {
           {faqData.map((item, index) => (
             <div key={item.id}>
               <div 
-                className="flex gap-4 items-start rounded-[16px] w-full cursor-pointer transition-all duration-200"
+                className="flex gap-2 md:gap-4 items-start rounded-[16px] w-full cursor-pointer transition-all duration-200 p-2 md:p-0"
                 onClick={() => toggleItem(item.id)}
               >
                 <div className="flex gap-2.5 items-center pt-1">
-                  <div className="relative size-[10px] transition-transform duration-300">
+                  <div className="relative size-[7px] md:size-[10px] transition-transform duration-300">
                     <div className="absolute inset-[-5%]">
                       <Image
                         src={openItems.includes(item.id) ? "/images/ui/button-close.svg" : "/images/ui/button-plus.svg"}
                         alt={openItems.includes(item.id) ? "Expand" : "Collapse"}
                         width={10}
                         height={10}
-                        className="block max-w-none w-[10px] h-[10px] transition-all duration-300"
+                        className="block max-w-none w-[7px] h-[7px] md:w-[10px] md:h-[10px] transition-all duration-300"
                       />
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col gap-2 items-start flex-1">
-                  <p className="font-jetbrains-mono text-[20px] font-normal text-[#292827] uppercase">
+                  <p className="font-jetbrains-mono text-[16px] md:text-[20px] font-normal text-[#292827] uppercase">
                     {item.question}
                   </p>
                   <div 

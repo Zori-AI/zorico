@@ -46,6 +46,15 @@ export default function RootLayout({
           <body
             className={`${raleway.variable} ${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} ${qedysans.variable} antialiased`}
           >
+            {/* SVG фильтры для глобального использования */}
+            <svg className="absolute w-0 h-0">
+              <defs>
+                <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                  <feColorMatrix type="saturate" values="1.5"/>
+                </filter>
+              </defs>
+            </svg>
             {children}
           </body>
         </html>

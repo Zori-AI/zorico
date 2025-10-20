@@ -9,16 +9,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#f8f2ec]">
       <Header />
-      <div className="container mx-auto flex flex-col gap-[128px] items-center py-[64px] w-full">
-        <HeroSection />
-        <AboutSection />
+      <div className="container overflow-hidden mx-auto flex flex-col gap-8 md:gap-[128px] items-center py-8 md:py-[64px] w-full pt-[14px] ">
+        <section id="home" className="section-offset w-full">
+          <HeroSection />
+        </section>
+        <section id="about" className="section-offset w-full">
+          <AboutSection />
+        </section>
       </div>
       <section id="how-zori-works" className="bg-[#f8f2ec] flex flex-col items-center pt-0 px-0 w-full relative overflow-hidden">
-        {/* Parallax Background */}
         <div className="absolute inset-0 flex flex-col items-start pointer-events-none">
           <div className="aspect-[1920/1080] mb-[-1px] relative w-full">
             <Image
-              src="/polaroid-bg.png"
+              src="/images/backgrounds/polaroid-bg.png"
               alt=""
               fill
               className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
@@ -26,7 +29,7 @@ export default function Home() {
           </div>
           <div className="aspect-[1920/1080] mb-[-1px] relative w-full">
             <Image
-              src="/polaroid-bg.png"
+              src="/images/backgrounds/polaroid-bg.png"
               alt=""
               fill
               className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
@@ -34,7 +37,7 @@ export default function Home() {
           </div>
           <div className="aspect-[1920/1080] mb-[-1px] relative w-full">
             <Image
-              src="/polaroid-bg.png"
+              src="/images/backgrounds/polaroid-bg.png"
               alt=""
               fill
               className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
@@ -42,7 +45,7 @@ export default function Home() {
           </div>
           <div className="aspect-[1920/1080] mb-[-1px] relative w-full">
             <Image
-              src="/polaroid-bg.png"
+              src="/images/backgrounds/polaroid-bg.png"
               alt=""
               fill
               className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
@@ -50,7 +53,7 @@ export default function Home() {
           </div>
           <div className="aspect-[1920/1080] mb-[-1px] relative w-full">
             <Image
-              src="/polaroid-bg.png"
+              src="/images/backgrounds/polaroid-bg.png"
               alt=""
               fill
               className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
@@ -58,7 +61,7 @@ export default function Home() {
           </div>
           <div className="aspect-[1920/1080] mb-[-1px] relative w-full">
             <Image
-              src="/polaroid-bg.png"
+              src="/images/backgrounds/polaroid-bg.png"
               alt=""
               fill
               className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
@@ -66,7 +69,7 @@ export default function Home() {
           </div>
           <div className="aspect-[1920/1080] mb-[-1px] relative w-full">
             <Image
-              src="/polaroid-bg.png"
+              src="/images/backgrounds/polaroid-bg.png"
               alt=""
               fill
               className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
@@ -74,7 +77,7 @@ export default function Home() {
           </div>
           <div className="aspect-[1920/1080] mb-[-1px] relative w-full">
             <Image
-              src="/polaroid-bg.png"
+              src="/images/backgrounds/polaroid-bg.png"
               alt=""
               fill
               className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
@@ -82,9 +85,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative py-16 z-10 w-full">
-          <div className="container mx-auto">
-            <p className="font-qedysans text-[36px] leading-[1.2] text-[#fffbf9] text-center">
+        <div className="relative py-8 md:py-16 z-10 w-full">
+          <div className="container mx-auto px-4 md:px-0">
+            <p className="font-qedysans text-[24px] md:text-[36px] leading-[1.2] text-[#fffbf9] text-center">
               How Zori works
             </p>
           </div>
