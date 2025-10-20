@@ -1,0 +1,7 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="burger">
+<path id="Line 72" d="M1 1H17" stroke="var(--stroke-0, #161512)" stroke-width="2" stroke-linecap="round"/>
+<path id="Line 73" d="M3 7L17 7" stroke="var(--stroke-0, #161512)" stroke-width="2" stroke-linecap="round"/>
+<path id="Line 74" d="M1 13H17" stroke="var(--stroke-0, #161512)" stroke-width="2" stroke-linecap="round"/>
+</g>
+</svg>
