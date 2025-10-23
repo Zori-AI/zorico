@@ -3,10 +3,10 @@ import Image from 'next/image';
 export function HeroSection() {
   return (
     <div className="bg-[#f8f2ec]">
-      <div className="container mx-auto px-0 md:px-16 md:pr-0">
-        <div className="flex flex-col-reverse md:flex-row gap-8 items-center justify-center py-0 md:py-16 mx-auto">
+      <div className="mx-auto px-0 md:px-16 md:pr-0">
+        <div className="flex flex-col-reverse md:flex-row gap-8 items-center justify-between py-0 md:py-16 mx-auto">
           {/* Text Content */}
-          <div className="flex flex-col gap-6 items-start px-4 md:px-0 justify-center w-full md:w-[464px] md:max-w-[464px]">
+          <div className="flex flex-col gap-6 justify-between items-start px-4 md:px-0 w-full md:w-[464px] md:max-w-[464px]">
             <div className="font-qedysans leading-[1.2] text-center w-full md:w-auto md:text-left text-[#292827] text-3xl lg:text-[48px]">
               <p className="mb-0 md:text-left">Your calm guide</p>
               <p>to self-understanding</p>
@@ -37,12 +37,12 @@ export function HeroSection() {
           </div>
 
           {/* Image Content */}
-          <div className="w-full md:w-[720px] max-w-[720px]">
+          <div className="w-full md:max-w-[60%]">
             <Image
               src="/images/logos/hero-logo.png"
               alt="Zori App Preview"
-              width={720}
-              height={454}
+              width={1400}
+              height={654}
               className="w-full h-auto object-contain"
               priority
             />

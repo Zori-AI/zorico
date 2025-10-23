@@ -54,7 +54,7 @@ export function Header() {
   return (
     <>
       <header className="header-fixed bg-[#f8f2ec] shadow-[0px_4px_8px_0px_rgba(0,0,0,0.05)] z-[60]">
-        <div className="container mx-auto px-4 md:px-16 py-4">
+        <div className="mx-auto px-4 md:px-16 py-4">
           <div className="flex items-center justify-between">
             {/* Mobile Menu Button */}
             <button
@@ -155,9 +155,9 @@ export function Header() {
       </header>
 
       {/* Mobile Menu */}
-      <MobileMenu 
-        isOpen={isMobileMenuOpen} 
-        onClose={closeMobileMenu} 
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={closeMobileMenu}
         onNavigate={scrollToSection}
         activeSection={activeSection}
       />
