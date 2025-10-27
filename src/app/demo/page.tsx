@@ -16,7 +16,7 @@ export default function DemoPage() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* SVG фильтры для блюра */}
+      {/* SVG filters for blur */}
       <svg className="absolute w-0 h-0">
         <defs>
           <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
@@ -26,17 +26,17 @@ export default function DemoPage() {
         </defs>
       </svg>
       
-      {/* Красивый градиентный фон для демонстрации эффекта стекла */}
+      {/* Beautiful gradient background for glass effect demonstration */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#667eea] via-[#764ba2] to-[#f093fb] z-0"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-[#4facfe] via-[#00f2fe] to-[#43e97b] z-0 opacity-60"></div>
       
-      {/* Декоративные фигуры с размытием и анимацией */}
+      {/* Decorative shapes with blur and animation */}
       <div className="absolute w-[250px] h-[250px] bg-gradient-to-r from-[#ffafbd] to-[#ffc3a0] rounded-full top-[10vh] left-[10vw] z-0 blur-md bg-float-1"></div>
       <div className="absolute w-[200px] h-[200px] bg-gradient-to-b from-[#d4a4eb] to-[#a265d6] rounded-full bottom-[15vh] right-[15vw] z-0 blur-md bg-float-2"></div>
       <div className="absolute w-[180px] h-[180px] bg-gradient-to-r from-[#a8edea] to-[#fed6e3] rounded-full top-[50vh] left-[60vw] z-0 blur-md bg-float-3"></div>
       <div className="absolute w-[300px] h-[300px] bg-gradient-to-br from-[#ffecd2] to-[#fcb69f] rounded-full bottom-[30vh] left-[5vw] z-0 blur-lg bg-float-1"></div>
       
-      {/* Дополнительные размытые элементы для глубины */}
+      {/* Additional blurred elements for depth */}
       <div className="absolute w-[300px] h-[300px] bg-gradient-to-r from-[#ff9a9e] to-[#fecfef] rounded-full top-[60vh] left-[5vw] z-0 blur-xl opacity-60"></div>
       <div className="absolute w-[150px] h-[150px] bg-gradient-to-b from-[#a8edea] to-[#fed6e3] rounded-full top-[20vh] right-[5vw] z-0 blur-lg opacity-70"></div>
       
@@ -46,7 +46,7 @@ export default function DemoPage() {
         </h1>
         
         <div className="space-y-8">
-          {/* Базовый пример */}
+          {/* Basic example */}
           <div className="space-y-4">
             <h2 className="font-jetbrains-mono text-xl text-white uppercase drop-shadow-md">
               Базовый пример (Desktop)
@@ -56,7 +56,7 @@ export default function DemoPage() {
             </div>
           </div>
 
-          {/* Мобильная версия */}
+          {/* Mobile version */}
           <div className="space-y-4">
             <h2 className="font-jetbrains-mono text-xl text-white uppercase drop-shadow-md">
               Мобильная версия
@@ -66,7 +66,7 @@ export default function DemoPage() {
             </div>
           </div>
 
-          {/* Интерактивный пример */}
+          {/* Interactive example */}
           <div className="space-y-4">
             <h2 className="font-jetbrains-mono text-xl text-white uppercase drop-shadow-md">
               Интерактивный пример
@@ -87,7 +87,7 @@ export default function DemoPage() {
             )}
           </div>
 
-          {/* Кастомный стиль */}
+          {/* Custom glassmorphism style */}
           <div className="space-y-4">
             <h2 className="font-jetbrains-mono text-xl text-white uppercase drop-shadow-md">
               Эффект стекла (Glassmorphism)
@@ -104,7 +104,7 @@ export default function DemoPage() {
             </p>
           </div>
 
-          {/* Сильный эффект стекла */}
+          {/* Strong glass effect */}
           <div className="space-y-4">
             <h2 className="font-jetbrains-mono text-xl text-white uppercase drop-shadow-md">
               Сильный эффект стекла
@@ -122,7 +122,7 @@ export default function DemoPage() {
             </p>
           </div>
 
-          {/* Код компонента */}
+          {/* Component code */}
           <div className="space-y-4">
             <h2 className="font-jetbrains-mono text-xl text-white uppercase drop-shadow-md">
               Код компонента
@@ -150,12 +150,12 @@ export function MyComponent() {
   );
 }
 
-/* Продвинутый эффект стекла включает:
- * - Двойная тень: 0 0 0 2px rgba(255,255,255,0.6), 0 16px 32px rgba(0,0,0,0.12)
- * - Размытие: backdrop-filter: blur(12px)
- * - Прозрачность: background: rgba(255,255,255,0.08)
- * - Прозрачная граница: border: 2px solid transparent
- * - Улучшенные hover эффекты
+/* Advanced glass effect includes:
+ * - Double shadow: 0 0 0 2px rgba(255,255,255,0.6), 0 16px 32px rgba(0,0,0,0.12)
+ * - Blur: backdrop-filter: blur(12px)
+ * - Transparency: background: rgba(255,255,255,0.08)
+ * - Transparent border: border: 2px solid transparent
+ * - Enhanced hover effects
  */`}
               </pre>
             </div>

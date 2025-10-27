@@ -9,34 +9,40 @@ export function Footer() {
 
   const handleEmailSubmit = () => {
     if (email.trim()) {
-      // Здесь можно добавить логику отправки email
+      // Email submission logic can be added here
       console.log('Email submitted:', email);
-      setEmail(''); // Очищаем поле после отправки
+      setEmail(''); // Clear field after submission
     }
   };
 
-  // Функция для плавной прокрутки к секции
+  // Function for smooth scrolling to a section with header offset
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
+      const header = document.querySelector('.header-fixed');
+      const headerHeight = header ? header.getBoundingClientRect().height : 80;
+      
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
       });
     }
   };
 
   return (
-    <div className="container mx-auto p-16">
+    <div className="container mx-auto px-4 py-8 xl:py-16 xl:px-16">
       <div className="flex flex-col gap-8 items-center mx-auto">
         {/* Stay with Zori section */}
         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-8">
           <div className="flex flex-col gap-4 items-center justify-center text-[#fffbf9] w-full md:w-[500px]">
-            <p className="font-qedysans text-[24px] md:text-[36px] leading-[1.2] w-full text-center md:text-left">
+            <p className="font-qedysans text-[24px] md:text-[36px] leading-[1.2] w-full text-left">
               Stay with Zori
             </p>
             <p
-              className="font-raleway-medium text-[16px] font-medium leading-[1.5] opacity-80 w-full text-center md:text-left">
+              className="font-raleway-medium text-[16px] font-medium leading-[1.5] opacity-80 w-full text-left">
               Zori helps you understand your emotions, follow cosmic cycles, and make choices that align with your true
               self.
             </p>
@@ -75,9 +81,9 @@ export function Footer() {
             className="font-jetbrains-mono text-[16px] md:text-[24px] font-normal text-[#fffbf9] uppercase text-center md:text-left">
             Download Zori
           </p>
-          <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4">
+          <div className="flex flex-col items-center md:items-start xl:flex-row xl:items-center justify-between w-full gap-4">
             <div
-              className="flex flex-col md:flex-row gap-4 items-center justify-center w-full max-w-[146px] md:max-w-full md:w-auto">
+              className="flex flex-col md:flex-row gap-4 xl:items-center justify-start w-full max-w-[146px] md:max-w-full md:w-auto">
               {/* Telegram button */}
               <button
                 className="bg-[#292827] border border-[#a7a7a7] flex gap-2.5 h-11 items-center p-2 rounded-[5px] hover:opacity-80 transition-opacity w-full md:w-auto">
@@ -88,6 +94,7 @@ export function Footer() {
                     width={40}
                     height={40}
                     className="block max-w-none size-full"
+                    loading="lazy"
                   />
                 </div>
                 <div className="font-['SF_Pro:Medium',_sans-serif] font-[510] font-normal leading-[1.2] whitespace-nowrap text-[#fffbf9]"
@@ -106,6 +113,7 @@ export function Footer() {
                     alt="Download on App Store"
                     width={146}
                     height={46}
+                    loading="lazy"
                   />
                 </div>
               </button>
@@ -118,13 +126,14 @@ export function Footer() {
                     alt="Get it on Google Play"
                     width={148}
                     height={46}
+                    loading="lazy"
                   />
                 </div>
               </button>
             </div>
 
             {/* Navigation buttons */}
-            <div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
+            <div className="hidden md:flex flex-col md:flex-row gap-4 items-center md:items-start">
               <button
                 onClick={() => scrollToSection('home')}
                 className="flex gap-2.5 items-center justify-center px-2 py-1 hover:opacity-80 cursor-pointer nav-button"
@@ -143,12 +152,30 @@ export function Footer() {
                   about
                 </p>
               </button>
+              <button
+                onClick={() => scrollToSection('how-zori-works')}
+                className="flex gap-2.5 items-center justify-center px-2 py-1 hover:opacity-80 cursor-pointer nav-button"
+              >
+                <p
+                  className="font-jetbrains-mono text-[16px] md:text-[20px] font-normal text-[#fffbf9] uppercase nav-text">
+                  how zori works
+                </p>
+              </button>
+              <button
+                onClick={() => scrollToSection('faq')}
+                className="flex gap-2.5 items-center justify-center px-2 py-1 hover:opacity-80 cursor-pointer nav-button"
+              >
+                <p
+                  className="font-jetbrains-mono text-[16px] md:text-[20px] font-normal text-[#fffbf9] uppercase nav-text">
+                  faq
+                </p>
+              </button>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
+        <div className="flex w-full flex-col md:flex-row gap-4 items-center ">
           <p
             className="font-jetbrains-mono text-[16px] font-normal leading-[1.2] opacity-80 text-[#fffbf9] uppercase text-center md:text-left">
             © 2025 Zori. All rights reserved.

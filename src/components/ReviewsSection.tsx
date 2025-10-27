@@ -41,29 +41,29 @@ export function ReviewsSection() {
 
   return (
     <div className="flex flex-col gap-8 items-center w-full">
-      <p className="font-qedysans text-[36px] text-[#292827] text-center leading-[1.2]">
+      <p className="font-qedysans text-[24px] md:text-[36px] text-[#292827] text-center leading-[1.2]">
         Zori Moments
       </p>
 
       <div className="relative w-full overflow-hidden">
-        {/* Градиенты по краям */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#f8f2ec] via-[#f8f2ec]/80 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#f8f2ec] via-[#f8f2ec]/80 to-transparent z-10 pointer-events-none" />
+        {/* Edge gradients */}
+        <div className="hidden md:block absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#f8f2ec] via-[#f8f2ec]/80 to-transparent z-10 pointer-events-none" />
+        <div className="hidden md:block absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#f8f2ec] via-[#f8f2ec]/80 to-transparent z-10 pointer-events-none" />
 
-        {/* Карусель с CSS анимацией */}
+        {/* CSS animation carousel */}
         <div
           className={`flex gap-4 py-4 px-4 reviews-carousel ${isPaused ? 'paused' : ''}`}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          {/* Дублируем отзывы для бесшовного зацикливания */}
+          {/* Duplicate reviews for seamless looping */}
           {[...reviews, ...reviews].map((review, index) => (
             <div
               key={`${review.id}-${index}`}
-              className="backdrop-blur-[2px] border border-[rgba(22,21,18,0.5)] rounded-2xl p-8 w-[266px] flex-shrink-0 flex flex-col gap-8"
+              className="backdrop-blur-[2px] border border-[rgba(22,21,18,0.5)] rounded-2xl p-4 md:p-8 w-[266px] flex-shrink-0 flex flex-col md:gap-8 gap-4"
             >
               <div className="flex flex-col gap-2">
-                <p className="font-jetbrains-mono text-[20px] text-[#292827] uppercase leading-[1.2]">
+                <p className="font-jetbrains-mono text-[16px] md:text-[20px] text-[#292827] uppercase leading-none">
                   {review.name}
                 </p>
               </div>

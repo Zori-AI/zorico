@@ -7,7 +7,7 @@ export function HeroSection() {
         <div className="flex flex-col-reverse md:flex-row gap-8 items-center justify-between py-0 md:py-16 mx-auto">
           {/* Text Content */}
           <div className="flex flex-col gap-6 justify-between items-start px-4 md:px-0 w-full md:w-[464px] md:max-w-[464px]">
-            <div className="font-qedysans leading-[1.2] text-center w-full md:w-auto md:text-left text-[#292827] text-3xl lg:text-[48px]">
+            <div id="hero-heading" className="font-qedysans leading-[1.2] text-center w-full md:w-auto md:text-left text-[#292827] text-3xl lg:text-[48px]">
               <p className="mb-0 md:text-left">Your calm guide</p>
               <p>to self-understanding</p>
             </div>

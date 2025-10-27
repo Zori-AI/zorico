@@ -8,6 +8,7 @@ export function AboutSection() {
           {/* Title and Text - Mobile First Layout */}
           <div className="flex flex-col gap-4 items-center">
             <h2
+              id="about-heading"
               className="font-qedysans leading-[1.2] text-[#292827] text-[24px] md:text-[36px] text-center w-full md:w-[255px]">
               About Zori
             </h2>
@@ -33,6 +34,7 @@ export function AboutSection() {
                       width={1}
                       height={144}
                       className="block max-w-none size-full"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -81,6 +83,7 @@ export function AboutSection() {
                   alt=""
                   fill
                   className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
+                  loading="lazy"
                 />
               </div>
               <div
@@ -92,6 +95,7 @@ export function AboutSection() {
                     width={965}
                     height={648}
                     className="absolute h-[111.72%] left-[-158.59%] max-w-none top-[41.57%] w-[265.54%]"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -102,6 +106,7 @@ export function AboutSection() {
                   alt=""
                   fill
                   className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -116,6 +121,7 @@ export function AboutSection() {
                   alt=""
                   fill
                   className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
+                  loading="lazy"
                 />
               </div>
               <div
@@ -126,6 +132,7 @@ export function AboutSection() {
                   width={120}
                   height={120}
                   className="block max-w-none size-full"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -140,6 +147,7 @@ export function AboutSection() {
                   alt=""
                   fill
                   className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
+                  loading="lazy"
                 />
               </div>
             </div>

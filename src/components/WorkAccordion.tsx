@@ -51,6 +51,7 @@ export function WorkAccordion() {
                   width={255}
                   height={255}
                   className="object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="-left-[14%] top-[-7%] w-[100px] h-[100px] md:w-[150px] md:h-[150px] md:left-[-16%] md:top-[-20%] md:block absolute lg:left-[-55%] lg:top-[-89px] lg:w-[255px] lg:h-[255px]">
@@ -60,6 +61,7 @@ export function WorkAccordion() {
                   width={255}
                   height={255}
                   className="object-cover "
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -96,6 +98,7 @@ export function WorkAccordion() {
                 width={255}
                 height={255}
                 className="object-cover"
+                loading="lazy"
               />
             </div>
             <div className="absolute left-[72%] top-[-90px] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[620px] md:top-[-125px] lg:left-[816px] lg:top-[-185px] xl:left-[926px] xl:top-[-165px] lg:w-[255px] lg:h-[255px]">
@@ -105,6 +108,7 @@ export function WorkAccordion() {
                 width={255}
                 height={255}
                 className="object-cover"
+                loading="lazy"
               />
             </div>
             <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-1">
@@ -171,6 +175,7 @@ export function WorkAccordion() {
                 width={255}
                 height={255}
                 className="object-cover"
+                loading="lazy"
               />
             </div>
             <div className="absolute left-[64%] top-[-18%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[350px] md:top-[325px] lg:left-[420px] lg:top-[285px] lg:w-[255px] lg:h-[255px]">
@@ -180,6 +185,7 @@ export function WorkAccordion() {
                 width={255}
                 height={255}
                 className="object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -226,6 +232,7 @@ export function WorkAccordion() {
                 width={255}
                 height={255}
                 className="object-cover"
+                loading="lazy"
               />
             </div>
             <div className="absolute left-[0%] md:right-none top-[22%] h-[100px] w-[100px] md:left-[32%] md:top-[2%] md:h-[150px] md:w-[150px] lg:left-[321px] lg:top-[-62px] xl:w-[255px] xl:h-[255px]">
@@ -235,6 +242,7 @@ export function WorkAccordion() {
                 width={255}
                 height={255}
                 className="object-cover"
+                loading="lazy"
               />
             </div>
           </div>

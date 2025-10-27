@@ -71,6 +71,7 @@ export function WorkSectionCard({
                   alt=""
                   fill
                   className="object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -94,6 +95,7 @@ export function WorkSectionCard({
                   width={255}
                   height={255}
                   className="object-cover"
+                  loading="lazy"
                 />
               </div>
             ))}

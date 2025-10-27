@@ -42,6 +42,7 @@ export function MobileMenu({ isOpen, onClose, onNavigate, activeSection }: Mobil
                   width={50}
                   height={2}
                   className="w-full h-0.5"
+                  loading="lazy"
                 />
               </div>
             )}
@@ -63,6 +64,51 @@ export function MobileMenu({ isOpen, onClose, onNavigate, activeSection }: Mobil
                   width={50}
                   height={2}
                   className="w-full h-0.5"
+                  loading="lazy"
+                />
+              </div>
+            )}
+          </button>
+          
+          {/* How it works Button */}
+          <button
+            onClick={() => onNavigate?.('how-zori-works')}
+            className="flex flex-col items-center justify-center h-11 w-full px-4 cursor-pointer hover:opacity-80 nav-button"
+          >
+            <span className="font-['JetBrains_Mono:Regular',_sans-serif] text-[20px] font-normal text-[#292827] uppercase leading-[22px] nav-text">
+              How it works
+            </span>
+            {activeSection === 'how-zori-works' && (
+              <div className="h-0 w-12 mt-2">
+                <Image
+                  src="/images/ui/underline.svg"
+                  alt=""
+                  width={50}
+                  height={2}
+                  className="w-full h-0.5"
+                  loading="lazy"
+                />
+              </div>
+            )}
+          </button>
+          
+          {/* FAQ Button */}
+          <button
+            onClick={() => onNavigate?.('faq')}
+            className="flex flex-col items-center justify-center h-11 w-full px-4 cursor-pointer hover:opacity-80 nav-button"
+          >
+            <span className="font-['JetBrains_Mono:Regular',_sans-serif] text-[20px] font-normal text-[#292827] uppercase leading-[22px] nav-text">
+              FAQ
+            </span>
+            {activeSection === 'faq' && (
+              <div className="h-0 w-12 mt-2">
+                <Image
+                  src="/images/ui/underline.svg"
+                  alt=""
+                  width={50}
+                  height={2}
+                  className="w-full h-0.5"
+                  loading="lazy"
                 />
               </div>
             )}
