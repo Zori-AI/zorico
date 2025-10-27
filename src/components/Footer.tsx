@@ -85,7 +85,10 @@ export function Footer() {
             <div
               className="flex flex-col md:flex-row gap-4 xl:items-center justify-start w-full max-w-[146px] md:max-w-full md:w-auto">
               {/* Telegram button */}
-              <button
+              <a
+                href="https://t.me/zori_astrology_bot"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#292827] border border-[#a7a7a7] flex gap-2.5 h-11 items-center p-2 rounded-[5px] hover:opacity-80 transition-opacity w-full md:w-auto">
                 <div className="aspect-[40/40] h-full relative">
                   <Image
@@ -103,7 +106,7 @@ export function Footer() {
                     Open in<br/> Telegram mini-app
                   </p>
                 </div>
-              </button>
+              </a>
 
               {/* App Store button */}
               <button className="h-11 relative w-[146px] transition-opacity ">

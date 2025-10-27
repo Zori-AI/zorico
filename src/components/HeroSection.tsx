@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 export function HeroSection() {
@@ -20,7 +22,22 @@ export function HeroSection() {
               </p>
             </div>
             <div className="w-full md:w-auto flex items-center justify-center">
-            <div className="relative h-11 w-[200px] flex items-center justify-center overflow-hidden rounded-[1000px]">
+            <button 
+              onClick={() => {
+                const footer = document.getElementById('footer');
+                if (footer) {
+                  const header = document.querySelector('.header-fixed');
+                  const headerHeight = header ? header.getBoundingClientRect().height : 80;
+                  const elementPosition = footer.getBoundingClientRect().top + window.scrollY;
+                  const offsetPosition = elementPosition - headerHeight;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+              className="relative h-11 w-[200px] flex items-center justify-center overflow-hidden rounded-[1000px] hover:opacity-90 transition-opacity cursor-pointer"
+            >
               <div className="absolute inset-0">
                 <Image
                   src="/images/backgrounds/button-bg.png"
@@ -32,7 +49,7 @@ export function HeroSection() {
               <div className="relative z-10 flex items-center justify-center">
                 <span className="font-qedysans text-[#fffbf9] text-base">Try Zori</span>
               </div>
-            </div>
+            </button>
           </div>
           </div>
 

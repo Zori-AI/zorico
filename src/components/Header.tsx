@@ -247,7 +247,10 @@ export function Header() {
             </nav>
 
             {/* CTA Button */}
-            <div className="flex items-center justify-center h-[32px] px-4 py-[10.5px] md:h-11 md:px-8 md:py-4 relative rounded-[1000px] shrink-0 overflow-clip">
+            <button 
+              onClick={() => scrollToSection('footer')}
+              className="flex items-center justify-center h-[32px] px-4 py-[10.5px] md:h-11 md:px-8 md:py-4 relative rounded-[1000px] shrink-0 overflow-clip hover:opacity-90 transition-opacity cursor-pointer"
+            >
               <div className="absolute h-[54px] left-[calc(50%+0.5px)] top-1/2 translate-x-[-50%] translate-y-[-50%] w-[209px]">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                   <Image
@@ -262,7 +265,7 @@ export function Header() {
               <div className="flex flex-col font-['Qedysans:Regular',_sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#fffbf9] text-[16px] text-nowrap">
                 <span className="leading-[1.2] whitespace-pre">Try Zori</span>
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </header>

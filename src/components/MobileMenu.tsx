@@ -14,15 +14,15 @@ export function MobileMenu({ isOpen, onClose, onNavigate, activeSection }: Mobil
     <>
       {/* Overlay */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-[#292827]/50 z-40 md:hidden"
           onClick={onClose}
         />
       )}
-      
+
       {/* Menu - Under Header */}
       <div className={`fixed left-0 right-0 bg-[#f8f2ec] z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
-        isOpen ? 'translate-y-0 top-[76px]' : '-translate-y-full -top-[190px]'
+        isOpen ? 'translate-y-0 top-[64px]' : '-translate-y-full -top-[190px]'
       }`}>
         {/* Menu Content */}
         <div className="flex flex-col gap-0 p-4">
@@ -47,7 +47,7 @@ export function MobileMenu({ isOpen, onClose, onNavigate, activeSection }: Mobil
               </div>
             )}
           </button>
-          
+
           {/* About Button */}
           <button
             onClick={() => onNavigate?.('about')}
@@ -69,7 +69,7 @@ export function MobileMenu({ isOpen, onClose, onNavigate, activeSection }: Mobil
               </div>
             )}
           </button>
-          
+
           {/* How it works Button */}
           <button
             onClick={() => onNavigate?.('how-zori-works')}
@@ -91,7 +91,7 @@ export function MobileMenu({ isOpen, onClose, onNavigate, activeSection }: Mobil
               </div>
             )}
           </button>
-          
+
           {/* FAQ Button */}
           <button
             onClick={() => onNavigate?.('faq')}

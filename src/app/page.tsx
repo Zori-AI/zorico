@@ -36,7 +36,7 @@ export default function Home() {
         <div className="relative z-10 w-full">
           <HowZoriWorksSection />
         </div>
-        <div className="relative z-10 w-full">
+        <div id="footer" className="relative z-10 w-full">
           <Footer />
         </div>
       </section>
