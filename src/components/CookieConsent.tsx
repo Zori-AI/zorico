@@ -27,7 +27,7 @@ export function CookieConsent() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center p-2  justify-center bg-black/30 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[100] flex items-center p-2  justify-center bg-black/30 backdrop-blur-sm">
       <div className="bg-[#faf9f7] rounded-[24px] p-4 max-w-[400px] w-full shadow-2xl animate-in fade-in-0 slide-in-from-bottom-4 duration-500">
 
         <div className="flex justify-center mb-4">
@@ -50,7 +50,7 @@ export function CookieConsent() {
             }}
           />
         </div>
-        
+
 
         {/* Heading */}
         <h2 className="font-jetbrains-mono text-[16px]  font-normal text-[#292827] uppercase mb-3 text-center">
