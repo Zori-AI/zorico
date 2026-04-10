@@ -95,16 +95,6 @@ export function AboutSection() {
                 className="object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Image
-                  src="/images/icons/phone-icon.svg"
-                  alt=""
-                  width={120}
-                  height={120}
-                  className="block"
-                  loading="lazy"
-                />
-              </div>
             </div>
 
             {/* Card 3 - Desktop */}
