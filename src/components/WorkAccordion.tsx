@@ -43,7 +43,7 @@ export function WorkAccordion() {
                   priority
                 />
               </div>
-              <div className="-right-[19%] -bottom-[-10%] w-[100px] h-[100px] md:w-[150px] md:h-[150px]   md:block absolute md:top-[60%] md:left-[200%]  lg:left-[230%] xl:left-[235%] lg:top-[109px] lg:w-[255px] lg:h-[255px]">
+              <div className="pointer-events-none absolute -right-[19%] -bottom-[-10%] z-0 w-[100px] h-[100px] md:right-auto md:bottom-auto md:left-[200%] md:top-[60%] md:w-[150px] md:h-[150px] md:translate-x-6 lg:left-[230%] lg:top-[109px] lg:translate-x-10 lg:w-[255px] lg:h-[255px] xl:left-[240%] xl:translate-x-12">
                 <Image
                   src="/images/planets/uranus.png"
                   alt="Uranus planet decoration"
@@ -54,7 +54,7 @@ export function WorkAccordion() {
                   loading="lazy"
                 />
               </div>
-              <div className="-left-[14%] top-[-7%] w-[100px] h-[100px] md:w-[150px] md:h-[150px] md:left-[-16%] md:top-[-20%] md:block absolute lg:left-[-55%] lg:top-[-89px] lg:w-[255px] lg:h-[255px]">
+              <div className="pointer-events-none absolute -left-[14%] top-[-7%] z-0 w-[100px] h-[100px] md:left-[-16%] md:top-[-20%] md:w-[150px] md:h-[150px] lg:left-[-55%] lg:top-[-89px] lg:w-[255px] lg:h-[255px]">
                 <Image
                   src="/images/planets/moon.png"
                   alt="Moon planet decoration"
@@ -66,7 +66,7 @@ export function WorkAccordion() {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-2">
+            <div className="relative z-10 flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-2 md:pr-2 lg:pr-4">
               <p className="font-raleway-medium tracking-normal text-[24px] md:text-[36px] leading-[1.2] w-full text-[#292827] text-left whitespace-pre">
                 Your inner sky map
               </p>
