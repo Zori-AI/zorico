@@ -61,8 +61,8 @@ export function AboutSection() {
                   <Image
                     src="/images/backgrounds/about-mobile-moon.png"
                     alt=""
-                    width={400}
-                    height={240}
+                    width={386}
+                    height={272}
                     sizes="100vw"
                     className="h-auto w-full object-contain"
                     priority
@@ -80,7 +80,7 @@ export function AboutSection() {
                 width={363}
                 height={240}
                 sizes="(max-width: 1280px) 33vw, 363px"
-                className="h-auto w-full rounded-2xl shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]"
+                className="h-auto w-full rounded-[16px] shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]"
                 loading="lazy"
               />
             </div>
@@ -88,10 +88,10 @@ export function AboutSection() {
               <Image
                 src="/images/backgrounds/about-image-2.png"
                 alt=""
-                width={386}
-                height={272}
-                sizes="(max-width: 1280px) 33vw, 386px"
-                className="h-auto w-full rounded-2xl shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]"
+                width={363}
+                height={240}
+                sizes="(max-width: 1280px) 33vw, 363px"
+                className="h-auto w-full rounded-[16px] shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]"
                 loading="lazy"
               />
             </div>
@@ -102,7 +102,7 @@ export function AboutSection() {
                 width={362}
                 height={240}
                 sizes="(max-width: 1280px) 33vw, 362px"
-                className="h-auto w-full rounded-2xl shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]"
+                className="h-auto w-full rounded-[16px] shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]"
                 loading="lazy"
               />
             </div>
