@@ -248,6 +248,75 @@ export function WorkAccordion() {
           </div>
         </div>
       </div>
+
+      {/* Self reflection */}
+      <div className="-mt-6 md:-mt-13 border-t border-[rgba(123,120,119,0.25)] rounded-t-[16px] p-4 md:p-8 w-full cursor-pointer transition-colors" style={{boxShadow: '0 -8px 16px 0 rgba(0, 0, 0, 0.05)'}} onClick={() => toggleSection(5)}>
+        <div className="flex gap-2 md:gap-4 items-start">
+          <span className="font-jetbrains-mono text-[16px] md:text-[20px] font-normal text-[#292827] uppercase">05</span>
+          <span className="font-jetbrains-mono text-[24px] md:text-[48px] font-normal text-[#292827] uppercase">Self reflection</span>
+        </div>
+      </div>
+
+      <div className={`transition-all duration-500 ease-in-out ${
+        activeSections.has(5) ? 'max-h-[900px] opacity-100' : 'max-h-0 pointer-events-none opacity-0'
+      }`}>
+        <div className="bg-[#f8f2ec] py-0 mb-10 md:mb-[100px] lg:py-16 lg:mb-[20px]">
+          <div className="flex flex-col md:flex-row items-center justify-between px-4 lg:px-[120px] xl:px-[200px] w-full relative gap-6">
+            <div className="flex gap-2.5 relative order-1 md:order-1 w-full justify-center md:w-auto">
+              <div className="flex flex-row items-end justify-center gap-3 sm:gap-4 md:gap-6 px-[4%] md:px-0 max-w-full">
+                <div className="flex min-w-0 max-w-[min(46vw,240px)] md:max-w-[220px] justify-center items-center">
+                  <Image
+                    src="/images/phones/reflection-1.png"
+                    alt="Reflection: journal entry screen"
+                    width={256}
+                    height={784}
+                    className="h-auto w-full object-contain max-h-[min(70vh,560px)]"
+                    sizes="(max-width: 768px) 46vw, 220px"
+                  />
+                </div>
+                <div className="flex min-w-0 max-w-[min(46vw,240px)] md:max-w-[220px] justify-center items-center">
+                  <Image
+                    src="/images/phones/reflection-2.png"
+                    alt="Reflection: entry saved screen"
+                    width={256}
+                    height={784}
+                    className="h-auto w-full object-contain max-h-[min(70vh,560px)]"
+                    sizes="(max-width: 768px) 46vw, 220px"
+                  />
+                </div>
+              </div>
+              <div className="absolute -right-[8%] bottom-[5%] w-[100px] h-[100px] md:w-[150px] md:h-[150px] md:right-[-18%] md:bottom-[8%] lg:right-[-25%] lg:bottom-[12%] pointer-events-none">
+                <Image
+                  src="/images/planets/moon.png"
+                  alt=""
+                  width={255}
+                  height={255}
+                  className="object-cover opacity-90"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute -left-[10%] top-[0%] w-[90px] h-[90px] md:w-[130px] md:h-[130px] md:-left-[20%] md:top-[5%] pointer-events-none">
+                <Image
+                  src="/images/planets/neptune.png"
+                  alt=""
+                  width={255}
+                  height={255}
+                  className="object-cover opacity-90"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-2 shrink-0">
+              <p className="font-qedysans text-[24px] md:text-[36px] leading-[1.2] text-[#292827] w-full text-left whitespace-pre">
+                A quiet space for what matters
+              </p>
+              <p className="font-raleway-medium text-[16px] font-medium leading-[1.5] text-[#52504e] text-left">
+                Write what is on your mind in a simple, private journal. Your reflections stay on your device, with history when you want to look back — and a calm moment of confirmation when you save an entry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
