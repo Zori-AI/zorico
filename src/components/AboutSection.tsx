@@ -73,38 +73,36 @@ export function AboutSection() {
 
           {/* Desktop Image Cards */}
           <div className="hidden md:flex flex-row gap-8 w-full items-center">
-            {/* Card 1 - Desktop */}
-            <div className="relative flex-1 h-[240px] rounded-2xl overflow-hidden shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]">
+            <div className="flex-1 min-w-0">
               <Image
                 src="/images/backgrounds/about-image-1.png"
                 alt=""
-                fill
+                width={363}
+                height={240}
                 sizes="(max-width: 1280px) 33vw, 363px"
-                className="object-cover"
+                className="h-auto w-full rounded-2xl shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]"
                 loading="lazy"
               />
             </div>
-
-            {/* Card 2 - Desktop */}
-            <div className="relative flex-1 h-[240px] rounded-2xl overflow-hidden shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]">
+            <div className="flex-1 min-w-0">
               <Image
                 src="/images/backgrounds/about-image-2.png"
                 alt=""
-                fill
+                width={386}
+                height={272}
                 sizes="(max-width: 1280px) 33vw, 386px"
-                className="object-cover"
+                className="h-auto w-full rounded-2xl shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]"
                 loading="lazy"
               />
             </div>
-
-            {/* Card 3 - Desktop */}
-            <div className="relative flex-1 h-[240px] rounded-2xl overflow-hidden shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]">
+            <div className="flex-1 min-w-0">
               <Image
                 src="/images/backgrounds/about-image-3.png"
                 alt=""
-                fill
+                width={362}
+                height={240}
                 sizes="(max-width: 1280px) 33vw, 362px"
-                className="object-cover"
+                className="h-auto w-full rounded-2xl shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]"
                 loading="lazy"
               />
             </div>
