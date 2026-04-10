@@ -72,89 +72,51 @@ export function AboutSection() {
           </div>
 
           {/* Desktop Image Cards */}
-          <div className="hidden md:flex flex-row gap-8 w-full items-center ">
+          <div className="hidden md:flex flex-row gap-8 w-full items-center">
             {/* Card 1 - Desktop */}
-            <div
-              className="bg-[rgba(38,36,35,0.85)] w-full flex-1 rounded-2xl overflow-hidden p-4 relative h-[240px] xl:w-[363px] shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]">
-              <div
-                className="absolute h-[648px] left-[calc(50%+0.504px)] top-[calc(50%-105px)] translate-x-[-50%] translate-y-[-50%] w-[363.165px]">
-                <Image
-                  src="/images/backgrounds/about-image-1.png"
-                  alt=""
-                  fill
-                  sizes="(max-width: 1280px) 33vw, 363px"
-                  className="pointer-events-none absolute inset-0 size-full max-w-none object-50%-50% object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                className="absolute h-[648px]  left-[calc(50%+0.504px)] top-[calc(50%-105px)] translate-x-[-50%] translate-y-[-50%] w-[363.165px]">
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                  <Image
-                    src="/images/backgrounds/about-image-2.png"
-                    alt=""
-                    width={965}
-                    height={648}
-                    sizes="(max-width: 1280px) 120vw, 400px"
-                    className="absolute left-[-158.59%] top-[41.57%] h-[111.72%] w-[265.54%] max-w-none"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div
-                className="absolute h-[1901px] left-[calc(50%+362.5px)] top-[calc(50%-40.5px)] translate-x-[-50%] translate-y-[-50%] w-[1768px]">
-                <Image
-                  src="/images/backgrounds/about-image-3.png"
-                  alt=""
-                  fill
-                  sizes="(max-width: 1280px) 33vw, 363px"
-                  className="pointer-events-none absolute inset-0 size-full max-w-none object-50%-50% object-cover"
-                  loading="lazy"
-                />
-              </div>
+            <div className="relative flex-1 h-[240px] rounded-2xl overflow-hidden shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]">
+              <Image
+                src="/images/backgrounds/about-image-1.png"
+                alt=""
+                fill
+                sizes="(max-width: 1280px) 33vw, 363px"
+                className="object-cover"
+                loading="lazy"
+              />
             </div>
 
             {/* Card 2 - Desktop */}
-            <div
-              className="bg-[rgba(38,36,35,0.85)] flex-1 rounded-2xl overflow-hidden p-4 relative h-[240px] xl:w-[363px] shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]">
-              <div
-                className="absolute h-[1901px] left-[calc(50%-0.164px)] top-[calc(50%-59.5px)] translate-x-[-50%] translate-y-[-50%] w-[1768px]">
-                <Image
-                  src="/images/backgrounds/about-image-3.png"
-                  alt=""
-                  fill
-                  sizes="(max-width: 1280px) 33vw, 363px"
-                  className="pointer-events-none absolute inset-0 size-full max-w-none object-50%-50% object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                className="absolute left-[calc(50%+0.836px)] size-[120px] top-1/2 translate-x-[-50%] translate-y-[-50%]">
+            <div className="relative flex-1 h-[240px] rounded-2xl overflow-hidden shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]">
+              <Image
+                src="/images/backgrounds/about-image-2.png"
+                alt=""
+                fill
+                sizes="(max-width: 1280px) 33vw, 386px"
+                className="object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
                 <Image
                   src="/images/icons/phone-icon.svg"
                   alt=""
                   width={120}
                   height={120}
-                  className="block max-w-none size-full"
+                  className="block"
                   loading="lazy"
                 />
               </div>
             </div>
 
             {/* Card 3 - Desktop */}
-            <div
-              className="bg-[rgba(38,36,35,0.85)] flex-1 rounded-2xl overflow-hidden p-4 relative h-[240px] xl:w-[362px] shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]">
-              <div
-                className="absolute h-[1901px] left-[calc(50%-363.336px)] top-[calc(50%-40.5px)] translate-x-[-50%] translate-y-[-50%] w-[1768px]">
-                <Image
-                  src="/images/backgrounds/about-image-3.png"
-                  alt=""
-                  fill
-                  sizes="(max-width: 1280px) 33vw, 362px"
-                  className="pointer-events-none absolute inset-0 size-full max-w-none object-50%-50% object-cover"
-                  loading="lazy"
-                />
-              </div>
+            <div className="relative flex-1 h-[240px] rounded-2xl overflow-hidden shadow-[-4px_4px_16px_0px_rgba(0,0,0,0.25)]">
+              <Image
+                src="/images/backgrounds/about-image-3.png"
+                alt=""
+                fill
+                sizes="(max-width: 1280px) 33vw, 362px"
+                className="object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
