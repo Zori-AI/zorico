@@ -43,7 +43,7 @@ export function WorkAccordion() {
                   priority
                 />
               </div>
-              <div className="pointer-events-none absolute -right-[19%] -bottom-[-10%] z-0 w-[100px] h-[100px] md:right-auto md:bottom-auto md:left-[200%] md:top-[60%] md:w-[150px] md:h-[150px] md:translate-x-6 lg:left-[230%] lg:top-[109px] lg:translate-x-10 lg:w-[255px] lg:h-[255px] xl:left-[240%] xl:translate-x-12">
+              <div className="pointer-events-none absolute right-[-38%] bottom-[-12%] z-0 h-[100px] w-[100px] md:right-auto md:bottom-auto md:left-[200%] md:top-[60%] md:h-[150px] md:w-[150px] md:translate-x-6 lg:left-[230%] lg:top-[109px] lg:h-[255px] lg:w-[255px] lg:translate-x-10 xl:left-[240%] xl:translate-x-12">
                 <Image
                   src="/images/planets/uranus.png"
                   alt="Uranus planet decoration"
@@ -54,7 +54,7 @@ export function WorkAccordion() {
                   loading="lazy"
                 />
               </div>
-              <div className="pointer-events-none absolute -left-[14%] top-[-7%] z-0 w-[100px] h-[100px] md:left-[-16%] md:top-[-20%] md:w-[150px] md:h-[150px] lg:left-[-55%] lg:top-[-89px] lg:w-[255px] lg:h-[255px]">
+              <div className="pointer-events-none absolute left-[-30%] top-[-8%] z-0 h-[100px] w-[100px] md:left-[-16%] md:top-[-20%] md:h-[150px] md:w-[150px] lg:left-[-55%] lg:top-[-89px] lg:h-[255px] lg:w-[255px]">
                 <Image
                   src="/images/planets/moon.png"
                   alt="Moon planet decoration"
@@ -91,18 +91,7 @@ export function WorkAccordion() {
       }`}>
        <div className="bg-[#f8f2ec] py-0 mb-10 md:mb-[100px] lg:py-16 lg:mb-[20px]">
           <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-[64px] xl:px-[200px] xl:pr-[134px] w-full relative gap-6">
-            <div className="absolute left-[1%] top-[2%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[30px] md:top-[325px] lg:left-[0px] lg:top-[285px] xl:left-[115px] xl:top-[285px] lg:w-[255px] lg:h-[255px]">
-              <Image
-                src="/images/planets/mars.png"
-                alt="Mars planet decoration"
-                width={255}
-                height={255}
-                sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="absolute left-[72%] top-[-90px] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[620px] md:top-[-125px] lg:left-[816px] lg:top-[-185px] xl:left-[926px] xl:top-[-165px] lg:w-[255px] lg:h-[255px]">
+            <div className="pointer-events-none absolute left-[72%] top-[-60px] z-0 w-[100px] h-[100px] md:left-[620px] md:top-[-125px] md:h-[150px] md:w-[150px] lg:left-[816px] lg:top-[-185px] lg:w-[255px] lg:h-[255px] xl:left-[926px] xl:top-[-165px]">
               <Image
                 src="/images/planets/mercury.png"
                 alt="Mercury planet decoration"
@@ -113,7 +102,7 @@ export function WorkAccordion() {
                 loading="lazy"
               />
             </div>
-            <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-1">
+            <div className="relative z-10 flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-1">
               <p className="font-raleway-medium tracking-normal text-[24px] md:text-[36px] leading-[1.2] text-[#292827] w-full text-left">
                 Astrology that
                 <br />
