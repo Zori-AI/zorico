@@ -51,7 +51,7 @@ export function FAQSection() {
   return (
     <div className="container mx-auto px-4 md:px-8">
       <div className="flex flex-col gap-8 items-center max-w-[1152px] mx-auto">
-        <p id="faq-heading" className="font-qedysans text-[24px] md:text-[36px] leading-[1.2] text-[#292827] text-center">
+        <p id="faq-heading" className="font-raleway-medium text-[24px] md:text-[36px] leading-[1.2] tracking-normal text-[#292827] text-center">
           FAQ
         </p>
         

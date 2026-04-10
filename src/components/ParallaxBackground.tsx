@@ -9,7 +9,8 @@ export function ParallaxBackground() {
           src="/images/backgrounds/polaroid-bg.png"
           alt=""
           fill
-          className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+          sizes="100vw"
+          className="pointer-events-none absolute inset-0 size-full max-w-none object-cover"
         />
       </div>
     </div>

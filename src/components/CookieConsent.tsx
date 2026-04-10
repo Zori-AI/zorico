@@ -66,7 +66,7 @@ export function CookieConsent() {
         <div className="flex gap-3 mt-6">
           <button
             onClick={handleDecline}
-            className="flex-1  text-[16px] font-qedysans text-[#292827] underline py-2 px-4 transition-all duration-200 hover:opacity-70"
+            className="flex-1  text-[16px] font-raleway-medium text-[#292827] underline py-2 px-4 transition-all duration-200 hover:opacity-70"
           >
             Decline
           </button>
@@ -81,7 +81,7 @@ export function CookieConsent() {
             </div>
             <button
               onClick={handleAccept}
-              className="relative z-10 w-full whitespace-nowrap h-full font-qedysans text-base text-white transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+              className="relative z-10 w-full whitespace-nowrap h-full font-raleway-medium text-base text-white transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
             >
               Allow cookies
             </button>

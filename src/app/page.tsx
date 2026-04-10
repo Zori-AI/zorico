@@ -28,7 +28,7 @@ export default function Home() {
 
         <div className="relative py-8 md:py-16 z-10 w-full">
           <div className="container mx-auto px-4 md:px-0">
-            <p id="how-zori-works-heading" className="font-qedysans text-[24px] md:text-[36px] leading-[1.2] text-[#FFFBF9] text-center drop-shadow-lg">
+            <p id="how-zori-works-heading" className="font-raleway-medium text-[24px] md:text-[36px] leading-[1.2] tracking-normal text-[#FFFBF9] text-center drop-shadow-lg">
               How Zori works
             </p>
           </div>

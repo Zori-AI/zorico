@@ -9,7 +9,10 @@ export function HeroSection() {
         <div className="flex flex-col-reverse md:flex-row gap-8 items-center justify-between py-0 md:py-16 mx-auto">
           {/* Text Content */}
           <div className="flex flex-col gap-6 justify-between items-start px-4 md:px-0 w-full md:w-[464px] md:max-w-[464px]">
-            <div id="hero-heading" className="font-qedysans leading-[1.2] text-center w-full md:w-auto md:text-left text-[#292827] text-3xl lg:text-[48px]">
+            <div
+              id="hero-heading"
+              className="font-raleway-medium leading-[1.2] tracking-normal text-center w-full md:w-auto md:text-left text-[#292827] text-[32px] md:text-[45px]"
+            >
               <p className="mb-0 md:text-left">Your calm guide</p>
               <p>to self-understanding</p>
             </div>
@@ -43,24 +46,26 @@ export function HeroSection() {
                   src="/images/backgrounds/button-bg.png"
                   alt=""
                   fill
+                  sizes="200px"
                   className="object-cover"
                 />
               </div>
               <div className="relative z-10 flex items-center justify-center">
-                <span className="font-qedysans text-[#fffbf9] text-base">Try Zori</span>
+                <span className="font-raleway-medium text-[#fffbf9] text-base tracking-wide">Try Zori</span>
               </div>
             </button>
           </div>
           </div>
 
-          {/* Image Content */}
+          {/* Image Content — green aurora + Z cards (full-width asset as before) */}
           <div className="w-full md:max-w-[60%]">
             <Image
               src="/images/logos/hero-logo.png"
               alt="Zori App Preview"
               width={1400}
               height={654}
-              className="w-full h-auto object-contain"
+              sizes="(max-width: 768px) 100vw, 60vw"
+              className="h-auto w-full object-contain"
               priority
             />
           </div>

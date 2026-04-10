@@ -41,7 +41,7 @@ export default function DemoPage() {
       <div className="absolute w-[150px] h-[150px] bg-gradient-to-b from-[#a8edea] to-[#fed6e3] rounded-full top-[20vh] right-[5vw] z-0 blur-lg opacity-70"></div>
       
       <div className="container mx-auto max-w-4xl relative z-10 p-8">
-        <h1 className="font-qedysans text-4xl text-white mb-8 text-center drop-shadow-lg">
+        <h1 className="font-raleway-medium tracking-normal text-4xl text-white mb-8 text-center drop-shadow-lg">
           Демонстрация компонента EmailInput
         </h1>
         

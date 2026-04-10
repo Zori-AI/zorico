@@ -262,8 +262,8 @@ export function Header() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col font-['Qedysans:Regular',_sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#fffbf9] text-[16px] text-nowrap">
-                <span className="leading-[1.2] whitespace-pre">Try Zori</span>
+              <div className="flex flex-col font-raleway-medium justify-center leading-[0] not-italic relative shrink-0 text-[#fffbf9] text-[16px] text-nowrap">
+                <span className="leading-[1.2] whitespace-pre tracking-wide">TRY NOW</span>
               </div>
             </button>
           </div>

@@ -57,7 +57,6 @@
   /* Font variables */
   --font-raleway: 'Raleway', sans-serif;
   --font-jetbrains-mono: 'JetBrains Mono', monospace;
-  --font-qedysans: 'Qedysans', serif;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.147 0.004 49.25);
   --popover: oklch(1 0 0);
@@ -153,11 +152,6 @@
   }
   
   /* Custom font families from design */
-  .font-qedysans {
-    font-family: var(--font-qedysans, 'Qedysans'), serif;
-    font-weight: 400;
-  }
-  
   .font-jetbrains-mono {
     font-family: var(--font-jetbrains-mono, 'JetBrains Mono'), monospace;
   }

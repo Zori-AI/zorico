@@ -78,7 +78,7 @@ export function WorkSectionCard({
             
             {/* Content */}
             <div className="flex flex-col gap-4 items-start w-[340px]">
-              <p className="font-qedysans text-[36px] leading-[1.2] text-[#292827] text-center whitespace-pre">
+              <p className="font-raleway-medium tracking-normal text-[36px] leading-[1.2] text-[#292827] text-center whitespace-pre">
                 {subtitle}
               </p>
               <p className="font-raleway-medium text-[16px] font-medium leading-[1.5] text-[#52504e] min-w-full w-[min-content]">

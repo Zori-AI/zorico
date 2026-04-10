@@ -41,7 +41,7 @@ export function ReviewsSection() {
 
   return (
     <div className="flex flex-col gap-8 items-center w-full">
-      <p className="font-qedysans text-[24px] md:text-[36px] text-[#292827] text-center leading-[1.2]">
+      <p className="font-raleway-medium text-[24px] md:text-[36px] text-[#292827] text-center leading-[1.2] tracking-normal">
         Zori Moments
       </p>
 

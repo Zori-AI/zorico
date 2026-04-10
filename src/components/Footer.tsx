@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import {useState} from 'react';
 import {EmailInput} from '@/components/ui/emailInput';
 
@@ -38,7 +39,7 @@ export function Footer() {
         {/* Stay with Zori section */}
         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-8">
           <div className="flex flex-col gap-4 items-center justify-center text-[#fffbf9] w-full md:w-[500px]">
-            <p className="font-qedysans text-[24px] md:text-[36px] leading-[1.2] w-full text-left">
+            <p className="font-raleway-medium text-[24px] md:text-[36px] leading-[1.2] tracking-normal w-full text-left">
               Stay with Zori
             </p>
             <p
@@ -181,18 +182,22 @@ export function Footer() {
         <div className="flex w-full flex-col md:flex-row gap-4 items-center ">
           <p
             className="font-jetbrains-mono text-[16px] font-normal leading-[1.2] opacity-80 text-[#fffbf9] uppercase text-center md:text-left">
-            © 2025 Zori. All rights reserved.
+            © 2026 Zori. All rights reserved.
           </p>
           <div className="flex gap-2 items-center">
-            <button
-              className="underline hover:opacity-80 transition-opacity text-[16px] font-jetbrains-mono text-[#fffbf9] uppercase">Privacy
-              Policy
-            </button>
+            <Link
+              href="/privacy"
+              className="underline hover:opacity-80 transition-opacity text-[16px] font-jetbrains-mono text-[#fffbf9] uppercase"
+            >
+              Privacy Policy
+            </Link>
             <span className="text-[#fffbf9]">·</span>
-            <button
-              className="underline hover:opacity-80 transition-opacity text-[16px] font-jetbrains-mono text-[#fffbf9] uppercase">Terms
-              of Use
-            </button>
+            <Link
+              href="/terms"
+              className="underline hover:opacity-80 transition-opacity text-[16px] font-jetbrains-mono text-[#fffbf9] uppercase"
+            >
+              Terms of Use
+            </Link>
           </div>
         </div>
       </div>
