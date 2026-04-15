@@ -43,7 +43,7 @@ export function WorkAccordion() {
                   priority
                 />
               </div>
-              <div className="pointer-events-none absolute right-[-38%] bottom-[-12%] z-0 h-[100px] w-[100px] md:right-auto md:bottom-auto md:left-[200%] md:top-[60%] md:h-[150px] md:w-[150px] md:translate-x-6 lg:left-[230%] lg:top-[109px] lg:h-[255px] lg:w-[255px] lg:translate-x-10 xl:left-[240%] xl:translate-x-12">
+              <div className="pointer-events-none absolute right-[-38%] bottom-[-12%] z-0 h-[100px] w-[100px] md:hidden lg:block lg:absolute lg:right-auto lg:bottom-auto lg:left-[230%] lg:top-[109px] lg:h-[255px] lg:w-[255px] lg:translate-x-10 xl:left-[240%] xl:translate-x-12">
                 <Image
                   src="/images/planets/uranus.png"
                   alt="Uranus planet decoration"
@@ -54,7 +54,7 @@ export function WorkAccordion() {
                   loading="lazy"
                 />
               </div>
-              <div className="pointer-events-none absolute left-[-30%] top-[-8%] z-0 h-[100px] w-[100px] md:left-[-16%] md:top-[-20%] md:h-[150px] md:w-[150px] lg:left-[-55%] lg:top-[-89px] lg:h-[255px] lg:w-[255px]">
+              <div className="pointer-events-none absolute left-[-30%] top-[-8%] z-0 h-[100px] w-[100px] md:hidden lg:block lg:absolute lg:left-[-55%] lg:top-[-89px] lg:h-[255px] lg:w-[255px]">
                 <Image
                   src="/images/planets/moon.png"
                   alt="Moon planet decoration"
@@ -91,7 +91,7 @@ export function WorkAccordion() {
       }`}>
        <div className="bg-[#f8f2ec] py-0 mb-10 md:mb-[100px] lg:py-16 lg:mb-[20px]">
           <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-[64px] xl:px-[200px] xl:pr-[134px] w-full relative gap-6">
-            <div className="pointer-events-none absolute left-[72%] top-[-60px] z-0 w-[100px] h-[100px] md:left-[620px] md:top-[-125px] md:h-[150px] md:w-[150px] lg:left-[816px] lg:top-[-185px] lg:w-[255px] lg:h-[255px] xl:left-[926px] xl:top-[-165px]">
+            <div className="pointer-events-none absolute left-[72%] top-[-60px] z-0 w-[100px] h-[100px] md:hidden lg:block lg:absolute lg:left-[816px] lg:top-[-185px] lg:w-[255px] lg:h-[255px] xl:left-[926px] xl:top-[-165px]">
               <Image
                 src="/images/planets/mercury.png"
                 alt="Mercury planet decoration"
@@ -155,7 +155,7 @@ export function WorkAccordion() {
                 />
               </div>
             </div>
-            <div className="order-2 flex w-full flex-col gap-4 items-center md:items-start pt-4 pb-6 text-left md:w-[340px] md:py-0 md:pb-0">
+            <div className="relative z-10 order-2 flex w-full flex-col gap-4 items-center md:items-start pt-4 pb-6 text-left md:w-[340px] md:py-0 md:pb-0">
               <p className="font-raleway-medium tracking-normal text-[24px] md:text-[36px] leading-[1.2] text-[#292827] w-full max-w-full">
                 Your Cosmic
                 <br />
@@ -166,24 +166,24 @@ export function WorkAccordion() {
               </p>
             </div>
             {/* Same markup as Chat (02): Mars + Mercury, absolute siblings — no rounded masks, filters, or shadows */}
-            <div className="absolute left-[1%] top-[2%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[30px] md:top-[325px] lg:left-[0px] lg:top-[285px] xl:left-[115px] xl:top-[285px] lg:w-[255px] lg:h-[255px]">
+            <div className="pointer-events-none absolute left-[1%] top-[2%] z-0 w-[100px] h-[100px] md:hidden lg:block lg:absolute lg:left-[0px] lg:top-[285px] lg:w-[255px] lg:h-[255px] xl:left-[115px] xl:top-[285px]">
               <Image
                 src="/images/planets/mars.png"
                 alt="Mars planet decoration"
                 width={255}
                 height={255}
-                sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
+                sizes="(max-width: 768px) 100px, 255px"
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
             </div>
-            <div className="absolute left-[72%] top-[-90px] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[620px] md:top-[-125px] lg:left-[816px] lg:top-[-185px] xl:left-[926px] xl:top-[-165px] lg:w-[255px] lg:h-[255px]">
+            <div className="pointer-events-none absolute left-[72%] top-[-90px] z-0 w-[100px] h-[100px] md:hidden lg:block lg:absolute lg:left-[816px] lg:top-[-185px] lg:w-[255px] lg:h-[255px] xl:left-[926px] xl:top-[-165px]">
               <Image
                 src="/images/planets/mercury.png"
                 alt="Mercury planet decoration"
                 width={255}
                 height={255}
-                sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
+                sizes="(max-width: 768px) 100px, 255px"
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
@@ -218,7 +218,7 @@ export function WorkAccordion() {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-2">
+            <div className="relative z-10 flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-2">
               <p className="font-raleway-medium tracking-normal text-[24px] md:text-[36px] leading-[1.2] text-[#292827] text-left whitespace-pre w-full">
                 Personal Cosmic Planner
               </p>
@@ -226,7 +226,7 @@ export function WorkAccordion() {
                 Plan your week with the forecast in view: see which days favor action, which call for rest, and how the current sky supports your choices.
               </p>
             </div>
-            <div className="absolute left-[0%] top-[8%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[539px] md:top-[-24px] lg:left-[739px] lg:top-[-74px] lg:w-[255px] lg:h-[255px]">
+            <div className="pointer-events-none absolute left-[0%] top-[8%] z-0 w-[100px] h-[100px] md:hidden lg:block lg:absolute lg:left-[739px] lg:top-[-74px] lg:w-[255px] lg:h-[255px]">
               <Image
                 src="/images/planets/saturn.png"
                 alt="Saturn planet decoration"
@@ -237,7 +237,7 @@ export function WorkAccordion() {
                 loading="lazy"
               />
             </div>
-            <div className="absolute left-[64%] top-[-18%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[350px] md:top-[325px] lg:left-[420px] lg:top-[285px] lg:w-[255px] lg:h-[255px]">
+            <div className="pointer-events-none absolute left-[64%] top-[-18%] z-0 w-[100px] h-[100px] md:hidden lg:block lg:absolute lg:left-[420px] lg:top-[285px] lg:w-[255px] lg:h-[255px]">
               <Image
                 src="/images/planets/neptune.png"
                 alt="Neptune planet decoration"
@@ -266,7 +266,7 @@ export function WorkAccordion() {
         <div className="bg-[#f8f2ec] py-0 mb-10 md:mb-[100px] lg:py-16 lg:mb-[20px]">
           {/* Original landing: copy left, phone right; Jupiter + Pluto as Figma-anchored absolutes (same idea as Calendar 04) */}
           <div className="flex flex-col md:flex-row md:items-center items-center justify-between px-4 md:px-[64px] lg:px-[100px] xl:px-[200px] xl:pl-[133px] w-full relative gap-8 md:gap-6 lg:gap-10 md:min-h-[420px] lg:min-h-[480px]">
-            <div className="order-2 md:order-1 flex w-full min-w-0 max-w-[min(100%,420px)] flex-col gap-4 items-center md:items-start md:max-w-[400px] lg:max-w-[420px]">
+            <div className="relative z-10 order-2 md:order-1 flex w-full min-w-0 max-w-[min(100%,420px)] flex-col gap-4 items-center md:items-start md:max-w-[400px] lg:max-w-[420px]">
               <p className="font-raleway-medium tracking-normal text-[24px] md:text-[36px] leading-[1.2] w-full text-left text-[#292827] whitespace-pre">
                 Your Star Mirror
               </p>
@@ -287,7 +287,7 @@ export function WorkAccordion() {
                 />
               </div>
             </div>
-            <div className="pointer-events-none absolute left-[8%] top-[-6%] h-[100px] w-[100px] md:left-[234px] md:top-[-48px] md:h-[150px] md:w-[150px] lg:left-[321px] lg:top-[-62px] lg:h-[255px] lg:w-[255px]">
+            <div className="pointer-events-none absolute left-[8%] top-[-6%] z-0 h-[100px] w-[100px] md:hidden lg:block lg:absolute lg:left-[321px] lg:top-[-62px] lg:h-[255px] lg:w-[255px]">
               <Image
                 src="/images/planets/jupiter.png"
                 alt=""
@@ -298,7 +298,7 @@ export function WorkAccordion() {
                 loading="lazy"
               />
             </div>
-            <div className="pointer-events-none absolute left-[52%] top-[38%] h-[100px] w-[100px] md:left-[580px] md:top-[200px] md:h-[150px] md:w-[150px] lg:left-[918px] lg:top-[252px] lg:h-[255px] lg:w-[255px]">
+            <div className="pointer-events-none absolute left-[52%] top-[38%] z-0 h-[100px] w-[100px] md:hidden lg:block lg:absolute lg:left-[918px] lg:top-[252px] lg:h-[255px] lg:w-[255px]">
               <Image
                 src="/images/planets/pluto.png"
                 alt=""
