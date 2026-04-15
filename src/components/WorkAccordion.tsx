@@ -20,54 +20,52 @@ export function WorkAccordion() {
 
   return (
     <div className="flex flex-col w-full">
-      {/* 01 Natal chart */}
-      <div className="border-t border-[rgba(123,120,119,0.25)] rounded-t-[16px] md:rounded-t-[32px] p-4 md:p-8 w-full transition-colors" style={{boxShadow: '0 -8px 16px 0 rgba(0, 0, 0, 0.05)'}}>
+      {/* Natal chart */}
+      <div className="border-t border-[rgba(123,120,119,0.25)] rounded-t-[16px] md:rounded-t-[32px] p-4 md:p-8 w-full cursor-pointer transition-colors" style={{boxShadow: '0 -8px 16px 0 rgba(0, 0, 0, 0.05)'}} onClick={() => toggleSection(1)}>
         <div className="flex gap-2 md:gap-4 items-start">
           <span className="font-jetbrains-mono text-[16px] md:text-[20px] font-normal text-[#292827] uppercase">01</span>
           <span className="font-jetbrains-mono text-[24px] md:text-[48px] font-normal text-[#292827] uppercase">Natal chart</span>
         </div>
       </div>
 
-      <div>
+      <div className={`transition-all duration-500 ease-in-out ${
+        activeSections.has(1) ? 'max-h-[800px] opacity-100' : 'max-h-0 pointer-events-none opacity-0'
+      }`}>
         <div className="bg-[#f8f2ec] py-0 mb-10 md:mb-[100px] lg:py-16 lg:mb-[20px]">
           <div className="flex flex-col md:flex-row items-center justify-between px-4 lg:px-[120px] xl:px-[200px] w-full relative ">
             <div className="flex gap-2.5 relative order-1 md:order-1">
-              <div className="flex w-full max-w-[240px] justify-center sm:max-w-[280px] md:max-w-[324px]">
+              <div className="min-w-[172px] max-w-[233px] px-[18%] md:px-0 md:max-w-[80%] flex justify-center items-center">
                 <Image
                   src="/images/phones/natal-chart.png"
                   alt="Phone showing natal chart interface"
-                  width={324}
-                  height={579}
-                  sizes="(max-width: 640px) 240px, (max-width: 768px) 280px, 324px"
-                  className="h-auto w-full object-contain"
+                  width={307}
+                  height={548}
                   priority
                 />
               </div>
-              <div className="pointer-events-none absolute -right-[19%] -bottom-[-10%] w-[100px] h-[100px] md:w-[150px] md:h-[150px] md:block md:top-[60%] md:left-[200%] lg:left-[230%] xl:left-[235%] lg:top-[109px] lg:w-[255px] lg:h-[255px]">
+              <div className="-right-[19%] -bottom-[-10%] w-[100px] h-[100px] md:w-[150px] md:h-[150px]   md:block absolute md:top-[60%] md:left-[200%]  lg:left-[230%] xl:left-[235%] lg:top-[109px] lg:w-[255px] lg:h-[255px]">
                 <Image
                   src="/images/planets/uranus.png"
                   alt="Uranus planet decoration"
                   width={255}
                   height={255}
-                  sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
-                  className="h-full w-full object-cover"
+                  className="object-cover"
                   loading="lazy"
                 />
               </div>
-              <div className="pointer-events-none absolute -left-[14%] top-[-7%] w-[100px] h-[100px] md:w-[150px] md:h-[150px] md:left-[-16%] md:top-[-20%] md:block lg:left-[-55%] lg:top-[-89px] lg:w-[255px] lg:h-[255px]">
+              <div className="-left-[14%] top-[-7%] w-[100px] h-[100px] md:w-[150px] md:h-[150px] md:left-[-16%] md:top-[-20%] md:block absolute lg:left-[-55%] lg:top-[-89px] lg:w-[255px] lg:h-[255px]">
                 <Image
                   src="/images/planets/moon.png"
                   alt="Moon planet decoration"
                   width={255}
                   height={255}
-                  sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
-                  className="h-full w-full object-cover"
+                  className="object-cover "
                   loading="lazy"
                 />
               </div>
             </div>
-            <div className="relative z-10 flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-2 md:pr-2 lg:pr-4">
-              <p className="font-raleway-medium tracking-normal text-[24px] md:text-[36px] leading-[1.2] w-full text-[#292827] text-left whitespace-pre">
+            <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-2">
+              <p className="font-raleway-medium text-[24px] md:text-[36px] leading-[1.2] w-full text-[#292827] text-left whitespace-pre">
                 Your inner sky map
               </p>
               <p className="font-raleway-medium text-[16px] font-medium leading-[1.5] text-[#52504e] text-left">
@@ -78,7 +76,7 @@ export function WorkAccordion() {
         </div>
       </div>
 
-      {/* 02 Chat */}
+      {/* Chat */}
       <div className="-mt-6 md:-mt-13 border-t border-[rgba(123,120,119,0.25)] rounded-t-[16px] p-4 md:p-8 w-full cursor-pointer transition-colors" style={{boxShadow: '0 -8px 16px 0 rgba(0, 0, 0, 0.05)'}} onClick={() => toggleSection(2)}>
         <div className="flex gap-2 md:gap-4 items-start">
           <span className="font-jetbrains-mono text-[16px] md:text-[20px] font-normal text-[#292827] uppercase">02</span>
@@ -91,56 +89,50 @@ export function WorkAccordion() {
       }`}>
        <div className="bg-[#f8f2ec] py-0 mb-10 md:mb-[100px] lg:py-16 lg:mb-[20px]">
           <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-[64px] xl:px-[200px] xl:pr-[134px] w-full relative gap-6">
-            <div className="pointer-events-none absolute left-[1%] top-[2%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[30px] md:top-[325px] lg:left-[0px] lg:top-[285px] xl:left-[115px] xl:top-[285px] lg:w-[255px] lg:h-[255px]">
+            <div className="absolute left-[1%] top-[2%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[30px] md:top-[325px] lg:left-[0px] lg:top-[285px] xl:left-[115px] xl:top-[285px] lg:w-[255px] lg:h-[255px]">
               <Image
                 src="/images/planets/mars.png"
                 alt="Mars planet decoration"
                 width={255}
                 height={255}
-                sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
-                className="h-full w-full object-cover"
+                className="object-cover"
                 loading="lazy"
               />
             </div>
-            <div className="pointer-events-none absolute left-[72%] top-[-90px] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[620px] md:top-[-125px] lg:left-[816px] lg:top-[-185px] xl:left-[926px] xl:top-[-165px] lg:w-[255px] lg:h-[255px]">
+            <div className="absolute left-[72%] top-[-90px] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[620px] md:top-[-125px] lg:left-[816px] lg:top-[-185px] xl:left-[926px] xl:top-[-165px] lg:w-[255px] lg:h-[255px]">
               <Image
                 src="/images/planets/mercury.png"
                 alt="Mercury planet decoration"
                 width={255}
                 height={255}
-                sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
-                className="h-full w-full object-cover"
+                className="object-cover"
                 loading="lazy"
               />
             </div>
-            <div className="relative z-10 flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-1">
-              <p className="font-raleway-medium tracking-normal text-[24px] md:text-[36px] leading-[1.2] text-[#292827] w-full text-left">
-                Astrology that
-                <br />
-                talks back
+            <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-1">
+              <p className="font-raleway-medium text-[24px] md:text-[36px] leading-[1.2] text-[#292827] w-full text-left whitespace-pre">
+                Astrology that talks back
               </p>
               <p className="font-raleway-medium text-[16px] font-medium leading-[1.5] text-[#52504e] text-left">
                 Ask Zori what&apos;s worrying you right now and get a grounded, personal answer based on your natal chart and current transits.
               </p>
             </div>
-            <div className="flex gap-2.5 items-center relative order-1 md:order-2">
-              <div className="flex w-full max-w-[360px] justify-center sm:max-w-[420px] md:max-w-[487px]">
-                <Image
-                  src="/images/phones/phone-2.png"
-                  alt="Phone showing chat interface"
-                  width={487}
-                  height={579}
-                  sizes="(max-width: 640px) 360px, (max-width: 768px) 420px, 487px"
-                  className="h-auto w-full object-contain"
-                  priority
-                />
-              </div>
+            <div className="flex gap-2.5 h-[280px] md:h-[499px] items-center relative order-1 md:order-2">
+            <div className="flex w-[232px] md:w-[330px] lg:w-[304px] xl:w-[414px]">
+              <Image
+                src="/images/phones/phone-2.png"
+                alt="Phone showing chat interface"
+                width={414}
+                height={499}
+                priority
+              />
+            </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* 03 Self reflection */}
+      {/* Self reflection */}
       <div className="-mt-6 md:-mt-13 border-t border-[rgba(123,120,119,0.25)] rounded-t-[16px] p-4 md:p-8 w-full cursor-pointer transition-colors" style={{boxShadow: '0 -8px 16px 0 rgba(0, 0, 0, 0.05)'}} onClick={() => toggleSection(3)}>
         <div className="flex gap-2 md:gap-4 items-start">
           <span className="font-jetbrains-mono text-[16px] md:text-[20px] font-normal text-[#292827] uppercase">03</span>
@@ -149,61 +141,54 @@ export function WorkAccordion() {
       </div>
 
       <div className={`transition-all duration-500 ease-in-out ${
-        activeSections.has(3) ? 'max-h-[900px] opacity-100' : 'max-h-0 pointer-events-none opacity-0'
+        activeSections.has(3) ? 'max-h-[800px] opacity-100' : 'max-h-0 pointer-events-none opacity-0'
       }`}>
         <div className="bg-[#f8f2ec] py-0 mb-10 md:mb-[100px] lg:py-16 lg:mb-[20px]">
-          <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-[64px] xl:px-[200px] xl:pr-[134px] w-full relative gap-6 md:min-h-[420px]">
-            <div className="order-1 flex w-full justify-center md:max-w-[360px] shrink-0">
-              <div className="flex w-full max-w-[240px] justify-center sm:max-w-[280px] md:max-w-[324px]">
+          <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-[64px] xl:px-[200px] xl:pr-[134px] w-full relative gap-6">
+            <div className="flex gap-2.5 relative order-1 md:order-1">
+              <div className="min-w-[172px] max-w-[233px] px-[18%] md:px-0 md:max-w-[80%] flex justify-center items-center">
                 <Image
                   src="/images/phones/reflection-phone.png"
                   alt="Reflection: private journal entry on your device"
-                  width={324}
-                  height={579}
-                  sizes="(max-width: 640px) 240px, (max-width: 768px) 280px, 324px"
-                  className="h-auto w-full object-contain"
+                  width={307}
+                  height={548}
                   priority
                 />
               </div>
+              <div className="absolute -left-[14%] top-[-7%] w-[100px] h-[100px] md:w-[150px] md:h-[150px] md:left-[-16%] md:top-[-20%] md:block lg:left-[-55%] lg:top-[-89px] lg:w-[255px] lg:h-[255px]">
+                <Image
+                  src="/images/planets/mars.png"
+                  alt="Mars planet decoration"
+                  width={255}
+                  height={255}
+                  className="object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute -right-[19%] -bottom-[-10%] w-[100px] h-[100px] md:w-[150px] md:h-[150px] md:block md:top-[60%] md:left-[200%] lg:left-[230%] xl:left-[235%] lg:top-[109px] lg:w-[255px] lg:h-[255px]">
+                <Image
+                  src="/images/planets/mercury.png"
+                  alt="Mercury planet decoration"
+                  width={255}
+                  height={255}
+                  className="object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
-            <div className="relative z-10 order-2 flex w-full flex-col gap-4 items-center md:items-start pt-4 pb-6 text-left md:w-[340px] md:py-0 md:pb-0">
-              <p className="font-raleway-medium tracking-normal text-[24px] md:text-[36px] leading-[1.2] text-[#292827] w-full max-w-full">
-                Your Cosmic
-                <br />
-                Reflection Space
+            <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-2">
+              <p className="font-raleway-medium text-[24px] md:text-[36px] leading-[1.2] text-[#292827] w-full text-left whitespace-pre">
+                Your Cosmic{'\n'}Reflection Space
               </p>
-              <p className="font-raleway-medium text-[16px] font-medium leading-[1.5] text-[#52504e] w-full max-w-full break-words [overflow-wrap:anywhere]">
+              <p className="font-raleway-medium text-[16px] font-medium leading-[1.5] text-[#52504e] text-left">
                 Write down what&apos;s on your mind. Zori saves it alongside your astrological context. Over time, patterns emerge: when you feel most creative, why certain weeks feel heavy, what the stars were doing last time you felt this way.
               </p>
-            </div>
-            {/* Same markup as Chat (02): Mars + Mercury, absolute siblings — no rounded masks, filters, or shadows */}
-            <div className="pointer-events-none absolute left-[1%] top-[2%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[30px] md:top-[325px] lg:left-[0px] lg:top-[285px] xl:left-[115px] xl:top-[285px] lg:w-[255px] lg:h-[255px]">
-              <Image
-                src="/images/planets/mars.png"
-                alt="Mars planet decoration"
-                width={255}
-                height={255}
-                sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="pointer-events-none absolute left-[72%] top-[-90px] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[620px] md:top-[-125px] lg:left-[816px] lg:top-[-185px] xl:left-[926px] xl:top-[-165px] lg:w-[255px] lg:h-[255px]">
-              <Image
-                src="/images/planets/mercury.png"
-                alt="Mercury planet decoration"
-                width={255}
-                height={255}
-                sizes="(max-width: 768px) 100px, 255px"
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
             </div>
           </div>
         </div>
       </div>
 
-      {/* 04 Calendar */}
+      {/* Calendar */}
       <div className="-mt-6 md:-mt-13 border-t bg-[#f8f2ec] border-[rgba(123,120,119,0.25)] rounded-t-[16px] p-4 md:p-8 w-full cursor-pointer transition-colors" onClick={() => toggleSection(4)} style={{boxShadow: '0 -8px 16px 0 rgba(0, 0, 0, 0.05)'}}>
         <div className="flex gap-2 md:gap-4 items-start">
           <span className="font-jetbrains-mono text-[16px] md:text-[20px] font-normal text-[#292827] uppercase">04</span>
@@ -216,46 +201,42 @@ export function WorkAccordion() {
       }`}>
         <div className="bg-[#f8f2ec] py-0 pt-4 mb-10 md:mb-[100px] lg:py-16 lg:mb-[20px]">
           <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-[64px] lg:px-[100px] xl:px-[200px] xl:pl-[133px] w-full relative gap-6">
-            <div className="flex gap-2.5 items-center relative order-1 md:order-1">
-              <div className="flex w-full max-w-[240px] justify-center sm:max-w-[280px] md:max-w-[324px]">
+            <div className="flex gap-2.5 h-[280px] md:h-[499px] items-center relative order-1 md:order-1">
+              <div className="max-w-[172px] md:max-w-[240px] xl:w-[306px] xl:h-[547px]">
                 <Image
                   src="/images/phones/calendar-phone.png"
                   alt="Phone showing calendar interface"
-                  width={324}
-                  height={579}
-                  sizes="(max-width: 640px) 240px, (max-width: 768px) 280px, 324px"
-                  className="h-auto w-full object-contain"
+                  width={306}
+                  height={547}
                   priority
                 />
               </div>
             </div>
-            <div className="relative z-10 flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-2">
-              <p className="font-raleway-medium tracking-normal text-[24px] md:text-[36px] leading-[1.2] text-[#292827] text-left whitespace-pre w-full">
+            <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-2">
+              <p className="font-raleway-medium text-[24px] md:text-[36px] leading-[1.2] text-[#292827] text-left whitespace-pre w-full">
                 Personal Cosmic Planner
               </p>
               <p className="font-raleway-medium text-[16px] font-medium leading-[1.5] text-[#52504e] text-left">
                 Plan your week with the forecast in view: see which days favor action, which call for rest, and how the current sky supports your choices.
               </p>
             </div>
-            <div className="pointer-events-none absolute left-[0%] top-[8%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[539px] md:top-[-24px] lg:left-[739px] lg:top-[-74px] lg:w-[255px] lg:h-[255px]">
+            <div className="absolute left-[0%] top-[8%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[539px] md:top-[-24px] lg:left-[739px] lg:top-[-74px] lg:w-[255px] lg:h-[255px]">
               <Image
                 src="/images/planets/saturn.png"
                 alt="Saturn planet decoration"
                 width={255}
                 height={255}
-                sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
-                className="h-full w-full object-cover"
+                className="object-cover"
                 loading="lazy"
               />
             </div>
-            <div className="pointer-events-none absolute left-[64%] top-[-18%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[350px] md:top-[325px] lg:left-[420px] lg:top-[285px] lg:w-[255px] lg:h-[255px]">
+            <div className="absolute left-[64%] top-[-18%] w-[100px] h-[100px] md:h-[150px] md:w-[150px] md:left-[350px] md:top-[325px] lg:left-[420px] lg:top-[285px] lg:w-[255px] lg:h-[255px]">
               <Image
                 src="/images/planets/neptune.png"
                 alt="Neptune planet decoration"
                 width={255}
                 height={255}
-                sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
-                className="h-full w-full object-cover"
+                className="object-cover"
                 loading="lazy"
               />
             </div>
@@ -263,7 +244,7 @@ export function WorkAccordion() {
         </div>
       </div>
 
-      {/* 05 Natal interpretations */}
+      {/* Natal Interpretations */}
       <div className="-mt-6 md:-mt-13 bg-[#f8f2ec] border-t border-[rgba(123,120,119,0.25)] rounded-t-[16px] p-4 md:p-8 w-full cursor-pointer transition-colors" style={{boxShadow: '0 -8px 16px 0 rgba(0, 0, 0, 0.05)'}} onClick={() => toggleSection(5)}>
         <div className="flex gap-2 md:gap-4 items-start">
           <span className="font-jetbrains-mono text-[16px] md:text-[20px] font-normal text-[#292827] uppercase">05</span>
@@ -272,51 +253,46 @@ export function WorkAccordion() {
       </div>
 
       <div className={`transition-all duration-500 ease-in-out ${
-        activeSections.has(5) ? 'max-h-[960px] opacity-100' : 'max-h-0 pointer-events-none opacity-0'
+        activeSections.has(5) ? 'max-h-[800px] opacity-100' : 'max-h-0 pointer-events-none opacity-0'
       }`}>
         <div className="bg-[#f8f2ec] py-0 mb-10 md:mb-[100px] lg:py-16 lg:mb-[20px]">
-          {/* Original landing: copy left, phone right; Jupiter + Pluto as Figma-anchored absolutes (same idea as Calendar 04) */}
-          <div className="flex flex-col md:flex-row md:items-center items-center justify-between px-4 md:px-[64px] lg:px-[100px] xl:px-[200px] xl:pl-[133px] w-full relative gap-8 md:gap-6 lg:gap-10 md:min-h-[420px] lg:min-h-[480px]">
-            <div className="relative z-10 order-2 md:order-1 flex w-full min-w-0 max-w-[min(100%,420px)] flex-col gap-4 items-center md:items-start md:max-w-[400px] lg:max-w-[420px]">
-              <p className="font-raleway-medium tracking-normal text-[24px] md:text-[36px] leading-[1.2] w-full text-left text-[#292827] whitespace-pre">
+          <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-[64px] lg:px-[100px] xl:px-[200px] xl:pl-[133px] w-full relative gap-6">
+            <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-[340px] order-2 md:order-1">
+              <p className="font-raleway-medium text-[24px] md:text-[36px] leading-[1.2] text-[#292827] w-full text-left whitespace-pre">
                 Your Star Mirror
               </p>
-              <p className="font-raleway-medium text-[16px] font-medium leading-[1.5] text-[#52504e] text-left break-words [overflow-wrap:anywhere]">
+              <p className="font-raleway-medium text-[16px] font-medium leading-[1.5] text-[#52504e] text-left">
                 Zori reveals the light and dark sides of your personality across all 12 houses, helping to understand your nature more deeply and turn contrasts into harmony.
               </p>
             </div>
-            <div className="relative order-1 md:order-2 flex justify-center md:justify-end shrink-0">
-              <div className="flex w-full max-w-[342px] justify-center sm:max-w-[399px] md:max-w-[462px]">
+            <div className="flex gap-2.5 h-[280px] md:h-[499px] items-center relative order-1 md:order-2">
+              <div className="max-w-[203px] md:max-w-[330px] lg:max-w-[304px] xl:max-w-[431px]">
                 <Image
                   src="/images/phones/natal-interpretations.png"
-                  alt="Natal interpretations: light and shadow house screens"
-                  width={462}
-                  height={579}
-                  sizes="(max-width: 640px) 342px, (max-width: 768px) 399px, 462px"
-                  className="relative z-10 h-auto w-full object-contain drop-shadow-[0_12px_32px_rgba(0,0,0,0.08)]"
+                  alt="Phone showing natal interpretations interface"
+                  width={431}
+                  height={548}
                   priority
                 />
               </div>
             </div>
-            <div className="pointer-events-none absolute left-[0%] top-[22%] h-[100px] w-[100px] md:left-[32%] md:top-[2%] md:h-[150px] md:w-[150px] lg:left-[321px] lg:top-[-62px] xl:w-[255px] xl:h-[255px]">
+            <div className="absolute right-[0%] md:right-none top-[-10%] h-[100px] w-[100px] md:left-[82%] md:top-[72%] md:h-[150px] md:w-[150px] lg:left-[818px] lg:top-[252px] xl:left-[918px] xl:top-[252px] xl:left-[718px] xl:top-[252px]">
               <Image
-                src="/images/planets/jupiter.png"
-                alt=""
+                src="/images/planets/pluto.png"
+                alt="Pluto planet decoration"
                 width={255}
                 height={255}
-                sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
-                className="h-full w-full object-cover"
+                className="object-cover"
                 loading="lazy"
               />
             </div>
-            <div className="pointer-events-none absolute right-[0%] top-[-10%] h-[100px] w-[100px] md:left-[82%] md:top-[72%] md:h-[150px] md:w-[150px] lg:left-[818px] lg:top-[252px] xl:left-[718px] xl:top-[252px]">
+            <div className="absolute left-[0%] md:right-none top-[22%] h-[100px] w-[100px] md:left-[32%] md:top-[2%] md:h-[150px] md:w-[150px] lg:left-[321px] lg:top-[-62px] xl:w-[255px] xl:h-[255px]">
               <Image
-                src="/images/planets/pluto.png"
-                alt=""
+                src="/images/planets/jupiter.png"
+                alt="Jupiter planet decoration"
                 width={255}
                 height={255}
-                sizes="(max-width: 768px) 100px, (max-width: 1024px) 150px, 255px"
-                className="h-full w-full object-cover"
+                className="object-cover"
                 loading="lazy"
               />
             </div>
