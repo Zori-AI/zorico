@@ -59,8 +59,8 @@ export default function PrivacyPolicyPage() {
           <p className="mb-6">
             Zori is operated by an individual entrepreneur registered in Portugal. For any privacy-related inquiries,
             data access requests, or concerns regarding your personal data, please contact us at:{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>
           </p>
 
@@ -204,8 +204,8 @@ export default function PrivacyPolicyPage() {
             list. As a result, you will receive information about our Service, features, offers, promotions, and events.
             You can opt out of marketing emails at any time by using the unsubscribe link in the email or by contacting us
             at{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>
             .
           </p>
@@ -315,8 +315,8 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p className="mb-6">
             If you are a California resident and wish to exercise any of these rights, please contact us at{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>{" "}
             with &quot;California Privacy Rights Request&quot; in the subject line. You may make this request once per
             twelve-month period. We will respond within forty-five (45) days of receiving your verified request.
@@ -415,8 +415,8 @@ export default function PrivacyPolicyPage() {
           <p className="mb-8">
             We do not knowingly process personal data from persons under 18 years of age. If you learn that anyone younger
             than 18 has provided us with personal data, please contact us at{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>
             .
           </p>
@@ -429,16 +429,16 @@ export default function PrivacyPolicyPage() {
             <strong className="text-[#292827]">Accessing / reviewing / updating / correcting your personal data.</strong>{" "}
             You may review, edit, or change the personal data that you had previously provided to us by accessing your
             Account settings. You may also request a copy of your personal data collected during your use of the Service at{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>
             .
           </p>
           <p className="mb-4">
             <strong className="text-[#292827]">Deleting your personal data.</strong> You can request erasure of your
             personal data by sending us an email at{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>
             . When you request deletion of your personal data, we will use reasonable efforts to honor your request. In some
             cases, we may be legally required to keep some of the data for a certain time; in such event, we will fulfill
@@ -447,8 +447,8 @@ export default function PrivacyPolicyPage() {
           <p className="mb-4">
             <strong className="text-[#292827]">Objecting to or restricting the use of your personal data.</strong> You can
             ask us to stop using all or some of your personal data or limit our use thereof by sending a request at{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>
             .
           </p>
@@ -462,8 +462,8 @@ export default function PrivacyPolicyPage() {
           <p className="mb-4">
             <strong className="text-[#292827]">The right to data portability.</strong> If you wish to receive your
             personal data in a machine-readable format, you can send a respective request at{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>
             .
           </p>
@@ -500,8 +500,8 @@ export default function PrivacyPolicyPage() {
           </p>
           <p className="mb-2">
             <strong className="text-[#292827]">Email:</strong>{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>
           </p>
           <p className="mb-10">Zori is operated by an individual entrepreneur registered in Portugal.</p>

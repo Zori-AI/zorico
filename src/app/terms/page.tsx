@@ -158,8 +158,8 @@ export default function TermsOfUsePage() {
           <p className="mb-6">
             You can manage your Subscription and turn off auto-renewal by going to your Account Settings in the App Store
             after purchase. You may also contact us at{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>{" "}
             for assistance.
           </p>
@@ -204,8 +204,8 @@ export default function TermsOfUsePage() {
           </p>
           <p className="mb-4">
             You may terminate your Account at any time by contacting us at{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>{" "}
             or by deleting your Account through the App settings.
           </p>
@@ -295,8 +295,8 @@ export default function TermsOfUsePage() {
           <p className="mb-6">
             Most disputes can be resolved without resort to arbitration. If you have any dispute with Zori, you agree
             that before taking any formal action, you will contact us at{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>{" "}
             and provide a brief, written description of the dispute and your contact information. The parties agree to
             use their best efforts to settle any dispute directly through good faith negotiations.
@@ -364,8 +364,8 @@ export default function TermsOfUsePage() {
           <h3 className={h3}>12.7. 30-Day Right to Opt Out</h3>
           <p className="mb-6">
             You have the right to opt out of the arbitration and class action waiver provisions by sending notice to{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>{" "}
             with the subject line &quot;ARBITRATION AND CLASS ACTION WAIVER OPT-OUT&quot; within 30 days of first using
             the App. Otherwise, you will be bound by this Arbitration Agreement.
@@ -444,8 +444,8 @@ export default function TermsOfUsePage() {
           <p className="mb-4">Please contact us with any questions regarding this Agreement.</p>
           <p className="mb-2">
             <strong className={strong}>Email:</strong>{" "}
-            <a href="mailto:support@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
-              support@zori.co
+            <a href="mailto:product@zori.co" className="text-[#292827] underline underline-offset-2 hover:opacity-80">
+              product@zori.co
             </a>
           </p>
           <p className="mb-6">
